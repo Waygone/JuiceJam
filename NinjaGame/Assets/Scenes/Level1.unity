@@ -193,11 +193,12 @@ MonoBehaviour:
   platformPrefab: {fileID: 4766550981675862769, guid: 7e2a78a18db16cf4da68c1d0fd918548, type: 3}
   playerPos: {x: 2, y: 2}
   enemyPos:
-  - {x: 3, y: 5}
-  - {x: 7, y: 3}
+  - {x: 10, y: 1}
+  - {x: 18, y: 1}
   platformPos:
   - {x: 0, y: 0}
   - {x: 10, y: 0}
+  - {x: 18, y: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
