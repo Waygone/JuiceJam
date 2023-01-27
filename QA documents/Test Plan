@@ -1,7 +1,9 @@
 Trello board: https://trello.com/b/OgoVwDYm/juice-jam-2
+
 Version 1: 1️⃣
   Testers: Vincent
   Things to test:
+  
     Menu: 🔍
           All buttons do what they are expected to do.
 
@@ -32,6 +34,9 @@ Version 1: 1️⃣
       Build fullscreen display size fits monitor.
       |
       Game can run for long periods without issue.
+
+
+--------------------------------------------------
 
 
 Version 2: 2️⃣
@@ -69,6 +74,7 @@ Version 2: 2️⃣
       
       Basic starter enemy finalised: 😈
         Enemy can attack.
+        |
         Enemy attacks feel fair.
         
       Basic level art: 🎨
@@ -85,9 +91,13 @@ Version 2: 2️⃣
         Game can run for long periods without issue.
 
 
+--------------------------------------------------
+
+
 Version 3: 3️⃣
   Testers: Vincent
   Things to test:
+  
     Level 1 SFX: 🔉
       SFX are working and sound good.
       |
@@ -131,8 +141,67 @@ Version 3: 3️⃣
         Build fullscreen display size fits monitor.
         |
         Game can run for long periods without issue.
-      
-      
+
+
+--------------------------------------------------
+
+
+Version 4: 4️⃣
+  Testers: Vincent
+  Things to test:
+  
+    Win / lose condition: 🏆
+      When Player dies:
+        Make sure camera stays in the same place.
+        |
+        Users are able to process what happened. (For example, if you go to the title screen the exact moment Player health <= 0 users might not be able to see
+        that you they died or process what they did wrong.)
+    
+    Level 1 completion (loading in enemy positions etc etc): 🌎
+      Level loads properly.
+      |
+      Level load time isn't too long.
+      |
+      Enemies spawn in properly.
+      |
+      I can navigate level without trouble. (I can't get lost too much.)
+      |
+      Level is otherwise fun.
+    
+    Enemy 2 completion: 😈
+      Enemies load in properly.
+      |
+      Enemy can attack.
+      |
+      Enemy attacks feel fair.
+    
+    Player Sprite: 👾
+      The right animations play at the right times.
+    
+    Enemy 1 and 2 sprite: 👾👾
+      The right animations play at the right times.
+      |
+      You can tell enemy type 1 from enemy type 2.
+    
+    Level 2 level design basics: 🌎
+      I can navigate the level without getting lost.
+      |
+      Level is otherwise fun.
+    
+    Particles & lighting: 💡
+      Make sure web build can handle lots of lights and particle effects without issue.
+    
+    Build: 🏭
+        Build runs on itch.io
+        |
+        Build display size is appropriate when not in fullscreen. (Some people make the screen size too big on the itch.io edit game page.)
+        |
+        Build fullscreen display size fits monitor.
+        |
+        Game can run for long periods without issue.
+
+
+--------------------------------------------------
 
 
 User testing: 💻
@@ -149,7 +218,9 @@ User testing: 💻
       The difficulty curve is correct.
       |
       The actions are satisfying.
-    
+
+
+--------------------------------------------------
 
 
 Other tests: 👽
