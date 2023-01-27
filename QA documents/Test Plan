@@ -1,0 +1,124 @@
+Trello board: https://trello.com/b/OgoVwDYm/juice-jam-2
+Version 1: 1️⃣
+  Testers: Vincent
+  Things to test:
+    Menu: 🔍
+          All buttons do what they are expected to do.
+
+    Level 1 design draft: 🌍
+      I can navigate the level without any trouble.
+    
+    Player movement: 🤾‍♀️
+      Player can jump.
+      |
+      Player can move.
+      |
+      Player still jumps if user presses jump right before Player hits the ground.
+      |
+      Player still jumps if user presses jump right after Player walks off a ledge. (Also called coyote time.)
+      |
+      Player movement otherwise feels good.
+   
+    Basic starter enemy: 😈
+      Enemies are spawned in.
+      |
+      Enemies can move.
+    
+    Build: 🏭
+      Build runs on itch.io
+      |
+      Build display size is appropriate when not in fullscreen. (Some people make the screen size too big on the itch.io edit game page.)
+      |
+      Build fullscreen display size fits monitor.
+      |
+      Game can run for long periods without issue.
+
+
+Version 2: 2️⃣
+  Testers: Vincent
+  Things to test:
+    
+    Level 1 music: 🎵
+      Music plays when it should.
+      |
+      Music loops properly.
+    
+    More in depth level 1 design: 🌍
+      I can navigate the level without any trouble.
+      |
+      If obstacles are added and Player can take damage:
+        Make sure the collisions feel right.
+    
+    Player movement abilities: 🤾‍♀️
+      If energy system added:
+        Abilities drain energy meter.
+        |
+      If player double jump has been added:
+        Player can tell when they still have a double jump left. (For example, Madeline's hair color changes to blue if she has already dashed
+        and hasn't touched the ground yet in Celeste.)
+        |
+        Second jump doesn't execute if Player is right above ground and is falling. (User may have intended to jump off the ground as opposed to executing
+        the second jump and may wonder why they can't jump a second time if second jump was already executed.)
+      
+      Basic starter enemy finalised: 😈
+        Enemy can attack.
+        Enemy attacks feel fair.
+        
+      Basic level art: 🎨
+        I can tell what's going on.
+        Level is still visible under non-ideal lighting conditions.
+      
+      Build: 🏭
+        Build runs on itch.io
+        |
+        Build display size is appropriate when not in fullscreen. (Some people make the screen size too big on the itch.io edit game page.)
+        |
+        Build fullscreen display size fits monitor.
+        |
+        Game can run for long periods without issue.
+
+
+
+
+User testing: 💻
+  Testers: people who haven't seen this game before, but prefrably play games in general.
+  Things to test:
+    Usability: 🧟‍♂️
+      The game is easy to understand.
+      |
+      User can navigate menus.
+      |
+      Graphics convey the functoins of the things they represent. (eg. spikes are pointy, platforms are separate from background, etc.)
+    
+    Fun: 🎉
+      The difficulty curve is correct.
+      |
+      The actions are satisfying.
+    
+
+
+Other tests: 👽
+  Testers: Vincent
+  Things to test:
+    Pausing: ⏸
+      Everything that is expected to pause does when game is paused.
+      |
+      Pausing and unpausing rapidly doesn't break anything.
+      
+    UI: 🔍
+      Everything is spelled correctly.
+      |
+      Game can't be unpaused by pressing the escape key if in fullscreen and if pressing the escape key exits fullscreen. This might disorient users and cause
+      them to take damage or die.
+      
+    Transitions: 🎬
+      When user goes from any level to title screen and hits the play button to go back to game everything is reset properly if need be.
+      |
+      Player health is stored or reset when changing levels.
+    
+    Performance: 🚀
+      Game runs smoothly on low-end devices.
+      |
+      Game runs smoothly with a lot of enemies on screen.
+      |
+      Game runs smoothly after being open for a long time.
