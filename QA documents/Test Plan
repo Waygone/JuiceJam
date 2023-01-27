@@ -105,8 +105,8 @@ Version 3: 3️⃣
       |
       Game can handle lots of sounds being played at once.
     
-    Level 1 design finalised: 🌎
-      I can navigate level without trouble. (I can't get lost too much.)
+    Level 1 design finalized: 🌎
+      I can navigate the level without trouble. (I can't get lost too much.)
       |
       Level is otherwise fun.
     
@@ -117,7 +117,7 @@ Version 3: 3️⃣
       |
       Player and enemies die if their health is less than or equal to 0.
       |
-      If player is invulnerable for a short period after taking damage:
+      If Player is invulnerable for a short period after taking damage:
         Player can't take damage while invulnerable.
         |
         It's clear when Player is and isn't invulnerable.
@@ -154,7 +154,7 @@ Version 4: 4️⃣
       When Player dies:
         Make sure camera stays in the same place.
         |
-        Users are able to process what happened. (For example, if you go to the title screen the exact moment Player health <= 0 users might not be able to see
+        Users can process what happened. (For example, if you go to the title screen the exact moment Player health <= 0 users might not be able to see
         that you they died or process what they did wrong.)
     
     Level 1 completion (loading in enemy positions etc etc): 🌎
@@ -205,14 +205,14 @@ Version 4: 4️⃣
 
 
 User testing: 💻
-  Testers: people who haven't seen this game before, but prefrably play games in general.
+  Testers: people who haven't seen this game before, but preferably play games in general.
   Things to test:
     Usability: 🧟‍♂️
       The game is easy to understand.
       |
       User can navigate menus.
       |
-      Graphics convey the functoins of the things they represent. (eg. spikes are pointy, platforms are separate from background, etc.)
+      Graphics convey the functions of the things they represent. (eg. spikes are pointy, platforms are separate from background, etc.)
     
     Fun: 🎉
       The difficulty curve is correct.
