@@ -1,1 +1,25 @@
+Version 1:
+  Testers: Vincent
+  Things to test:
+    Menu:
+          All buttons do what they are expected to do.
 
+    Level 1 design draft:
+      I can navigate the level without any trouble.
+    
+    Player movement:
+      Player can jump.
+      Player can move.
+      Player still jumps if user presses jump right before Player hits the ground.
+      Player still jumps if user presses jump right after Player walks off ledge. (Aalso called coyote time.)
+      Player movement otherwise feels good.
+   
+    Basic starter enemy:
+      Enemies are spawned in.
+      Enemies can move.
+    
+    Build:
+      Build runs on itch.io
+      Build display size is appropriate when not in fullscreen. (Sone people make the screen size too big on the itch.io edit game page.)
+      Build fullscreen display size fits monitor.
+      Game can run for long periods of time without issue.
