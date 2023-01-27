@@ -1,25 +1,77 @@
-Version 1:
+Version 1: 1️⃣
   Testers: Vincent
   Things to test:
-    Menu:
+    Menu: 🔍
           All buttons do what they are expected to do.
 
-    Level 1 design draft:
+    Level 1 design draft: 🌍
       I can navigate the level without any trouble.
     
-    Player movement:
+    Player movement: 🤾‍♀️
       Player can jump.
+      |
       Player can move.
+      |
       Player still jumps if user presses jump right before Player hits the ground.
+      |
       Player still jumps if user presses jump right after Player walks off ledge. (Aalso called coyote time.)
+      |
       Player movement otherwise feels good.
    
-    Basic starter enemy:
+    Basic starter enemy: 😈
       Enemies are spawned in.
+      |
       Enemies can move.
     
-    Build:
+    Build: 🏭
       Build runs on itch.io
+      |
       Build display size is appropriate when not in fullscreen. (Sone people make the screen size too big on the itch.io edit game page.)
+      |
       Build fullscreen display size fits monitor.
+      |
       Game can run for long periods of time without issue.
+
+
+Version 2: 2️⃣
+  Testers: Vincent
+  Things to test:
+    
+    Level 1 music: 🎵
+      Music plays when it should.
+      |
+      Music loops properly.
+    
+    More in depth level 1 design: 🌍
+      I can navigate the level without any trouble.
+      |
+      If obstacles are added and Player can take damage:
+        Make sure the collisions feel right.
+    
+    Player movement abilities: 🤾‍♀️
+      If energy system added:
+        Abilities drain energy meter.
+        |
+      If player double jump has been added:
+        Player can tell when they still have a double jump left. (For example, Madeline's hair color changes to blue if she has already dashed
+        and hasn't touched the ground yet in Celeste.)
+        |
+        Second jump doesn't execute if Player is right above ground and is falling. (User may have intended to jump off the ground as opposed to executing
+        the second jump and may wonder why they can't jump a second time if second jump was already executed.)
+      
+      Basic starter enemy finalised: 😈
+        Enemy can attack.
+        Enemy attacks feel fair.
+        
+      Basic level art: 🎨
+        I can tell what's going on.
+        Level is still visible under non-ideal lighting conditions.
+      
+      Build: 🏭
+        Build runs on itch.io
+        |
+        Build display size is appropriate when not in fullscreen. (Sone people make the screen size too big on the itch.io edit game page.)
+        |
+        Build fullscreen display size fits monitor.
+        |
+        Game can run for long periods of time without issue.
