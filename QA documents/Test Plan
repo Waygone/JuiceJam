@@ -60,6 +60,13 @@ Version 2: 2️⃣
         Second jump doesn't execute if Player is right above ground and is falling. (User may have intended to jump off the ground as opposed to executing
         the second jump and may wonder why they can't jump a second time if second jump was already executed.)
       
+      If player dash has been added:
+        Player can tell when they can dash.
+        |
+        Player can't dash through walls.
+        |
+        Player can't use dash to access anything they're not supposed to.
+      
       Basic starter enemy finalised: 😈
         Enemy can attack.
         Enemy attacks feel fair.
@@ -78,6 +85,54 @@ Version 2: 2️⃣
         Game can run for long periods without issue.
 
 
+Version 3: 3️⃣
+  Testers: Vincent
+  Things to test:
+    Level 1 SFX: 🔉
+      SFX are working and sound good.
+      |
+      Audio doesn't clip.
+      |
+      Game can handle lots of sounds being played at once.
+    
+    Level 1 design finalised: 🌎
+      I can navigate level without trouble. (I can't get lost too much.)
+      |
+      Level is otherwise fun.
+    
+    Health system: 💗
+      Player takes damage.
+      |
+      Enemies take damage.
+      |
+      Player and enemies die if their health is less than or equal to 0.
+      |
+      If player is invulnerable for a short period after taking damage:
+        Player can't take damage while invulnerable.
+        |
+        It's clear when Player is and isn't invulnerable.
+      
+      
+      Enemy 2 concept: 😈
+        Enemies are spawned in.
+        |
+        Enemies can move.
+      
+      Level 1 Art finalised: 🎨
+        Art conveys what things are supposed to do.
+        |
+        Objects are visible under non-ideal conditions. (glare, dim screen, small screen)
+      
+      Build: 🏭
+        Build runs on itch.io
+        |
+        Build display size is appropriate when not in fullscreen. (Some people make the screen size too big on the itch.io edit game page.)
+        |
+        Build fullscreen display size fits monitor.
+        |
+        Game can run for long periods without issue.
+      
+      
 
 
 User testing: 💻
