@@ -161,17 +161,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.033057854
     - serializedVersion: 3
-      time: 0.28120124
-      value: 3.2465475
-      inSlope: 6.9994054
-      outSlope: 6.9994054
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.083170615
-    - serializedVersion: 3
-      time: 0.9996033
-      value: 5.016266
+      time: 1.003418
+      value: 6.976074
       inSlope: 0.24981153
       outSlope: 0.24981153
       tangentMode: 0
@@ -223,15 +214,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae2dd105ae15184ab653f13fceea5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 7
-  lowFallForce: 7
-  fallForce: 5
-  groundedArea: 0.1
+  jumpForce: 6
+  lowFallForce: 4
+  fallForce: 3
+  groundedArea: 0.05
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  coyoteTime: 0.25
-  jumpBufferTime: 0.25
+  coyoteTime: 0.1
+  jumpBufferTime: 0.1
 --- !u!114 &-1623518377664601420
 MonoBehaviour:
   m_ObjectHideFlags: 0
