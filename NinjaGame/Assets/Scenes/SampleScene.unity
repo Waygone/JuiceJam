@@ -262,6 +262,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6458330052447446581, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: acceleration.m_Curve.Array.data[1].time
+      value: 0.40082672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458330052447446581, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: acceleration.m_Curve.Array.data[2].time
+      value: 1.0069128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458330052447446581, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: acceleration.m_Curve.Array.data[1].value
+      value: 2.9351459
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458330052447446581, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: acceleration.m_Curve.Array.data[2].value
+      value: 3.5219047
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
 --- !u!1001 &4766550982151345849
@@ -276,12 +292,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4766550981675862769, guid: 7e2a78a18db16cf4da68c1d0fd918548, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766550981675862769, guid: 7e2a78a18db16cf4da68c1d0fd918548, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4766550981675862769, guid: 7e2a78a18db16cf4da68c1d0fd918548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: 4766550981675862769, guid: 7e2a78a18db16cf4da68c1d0fd918548, type: 3}
       propertyPath: m_LocalPosition.z
