@@ -13,10 +13,6 @@ Version 1: 1️⃣
       I can navigate the level without any trouble.
     
     Player movement: 🤾‍♀️
-      Player can jump.
-      |
-      Player can move.
-      |
       Player still jumps if user presses jump right before Player hits the ground.
       |
       Player still jumps if user presses jump right after Player walks off a ledge. (Also called coyote time.)
