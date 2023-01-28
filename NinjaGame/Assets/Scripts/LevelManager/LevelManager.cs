@@ -8,13 +8,10 @@ public class LevelManager : MonoBehaviour
     public Player player;
     public Transform enemyFolder;
     public Transform enemyPrefab;
-    public Transform platformFolder;
-    public Transform platformPrefab;
 
     //LEVEL DATA
     public Vector2 playerPos;
     public Vector2[] enemyPos;
-    public Vector2[] platformPos;
 
     private void Start()
     {
@@ -26,7 +23,6 @@ public class LevelManager : MonoBehaviour
         clearAll();
         player.transform.position = new Vector2(playerPos.x, playerPos.y);
         spawnEnemies();
-        spawnPlatforms();
     }
 
     void spawnEnemies()
@@ -39,23 +35,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    void spawnPlatforms()
-    {
-        for (int i = 0; i < platformPos.Length; i++)
-        {
-            Transform newPlatform = Instantiate(platformPrefab) as Transform;
-            newPlatform.position = new Vector2(platformPos[i].x, platformPos[i].y);
-            newPlatform.parent = platformFolder;
-        }
-    }
-
     void clearAll()
     {
         foreach(Transform child in enemyFolder)
-        {
-            Destroy(child.gameObject);
-        }
-        foreach (Transform child in platformFolder)
         {
             Destroy(child.gameObject);
         }
