@@ -1,37 +1,35 @@
 Trello board: https://trello.com/b/OgoVwDYm/juice-jam-2
 
+Make sure to execute tests and find bugs as early on as possible if you're in QA! (That means you, me! 👁‍🗨)
+
 Version 1: 1️⃣
   Testers: Vincent
   Things to test:
   
     Menu: 🔍
-          All buttons do what they are expected to do.
+          All buttons do what they are expected to do. ✅
 
     Level 1 design draft: 🌍
-      I can navigate the level without any trouble.
+      I can navigate the level without any trouble. ✅
     
     Player movement: 🤾‍♀️
-      Player can jump.
+      Player still jumps if user presses jump right before Player hits the ground. ✅
       |
-      Player can move.
+      Player still jumps if user presses jump right after Player walks off a ledge. (Also called coyote time.) 🟡 - can't test due to the player's collision shape
       |
-      Player still jumps if user presses jump right before Player hits the ground.
-      |
-      Player still jumps if user presses jump right after Player walks off a ledge. (Also called coyote time.)
-      |
-      Player movement otherwise feels good.
+      Player movement otherwise feels good. ⛔
    
     Basic starter enemy: 😈
-      Enemies are spawned in.
+      Enemies are spawned in. ✅
       |
-      Enemies can move.
+      Enemies can move. ✅
     
-    Build: 🏭
-      Build runs on itch.io
+    Build:  🏭
+      Build runs on itch.io ✅
       |
-      Build display size is appropriate when not in fullscreen. (Some people make the screen size too big on the itch.io edit game page.)
+      Build display size is appropriate when not in fullscreen. (Some people make the screen size too big on the itch.io edit game page.) ✅
       |
-      Build fullscreen display size fits monitor.
+      Build fullscreen display size fits monitor. ✅
       |
       Game can run for long periods without issue.
 
@@ -57,6 +55,8 @@ Version 2: 2️⃣
     Player movement abilities: 🤾‍♀️
       If energy system added:
         Abilities drain energy meter.
+        |
+        I can't use abilities when energy meter is empty.
         |
       If player double jump has been added:
         Player can tell when they still have a double jump left. (For example, Madeline's hair color changes to blue if she has already dashed
@@ -87,6 +87,8 @@ Version 2: 2️⃣
         Build display size is appropriate when not in fullscreen. (Some people make the screen size too big on the itch.io edit game page.)
         |
         Build fullscreen display size fits monitor.
+        |
+        Game scales properly when in fullscreen.
         |
         Game can run for long periods without issue.
 
@@ -230,7 +232,11 @@ Other tests: 👽
       Everything that is expected to pause does when game is paused.
       |
       Pausing and unpausing rapidly doesn't break anything.
-      
+    
+    Physics: 👨‍🔬
+      Make sure objects move, accelerate and decelerate at the same rate accross all framerates. (If speeds are different you probably need to multiply 
+      the rate of movement/acceleration/deceleration by Time.deltaTime)
+    
     UI: 🔍
       Everything is spelled correctly.
       |
