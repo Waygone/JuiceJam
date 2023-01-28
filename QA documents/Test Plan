@@ -1,5 +1,7 @@
 Trello board: https://trello.com/b/OgoVwDYm/juice-jam-2
 
+Make sure to execute tests and find bugs as early on as possible if you're in QA! (That means you, me! 👁‍🗨)
+
 Version 1: 1️⃣
   Testers: Vincent
   Things to test:
@@ -230,7 +232,11 @@ Other tests: 👽
       Everything that is expected to pause does when game is paused.
       |
       Pausing and unpausing rapidly doesn't break anything.
-      
+    
+    Physics: 👨‍🔬
+      Make sure objects move, accelerate and decelerate at the same rate accross all framerates. (If speeds are different you probably need to multiply 
+      the rate of movement/acceleration/deceleration by Time.deltaTime)
+    
     UI: 🔍
       Everything is spelled correctly.
       |
