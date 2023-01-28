@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3927995714937903108}
   - component: {fileID: 7671691004523407335}
   - component: {fileID: 6458330052447446581}
+  - component: {fileID: 6181276847595846569}
   - component: {fileID: -1623518377664601420}
   m_Layer: 0
   m_Name: Player
@@ -104,11 +105,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aec386517a143384bb884422d1f57b9b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7671691004523407335
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160,17 +161,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.033057854
     - serializedVersion: 3
-      time: 0.28120124
-      value: 3.2465475
-      inSlope: 6.9994054
-      outSlope: 6.9994054
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.083170615
-    - serializedVersion: 3
-      time: 0.9996033
-      value: 5.016266
+      time: 1.003418
+      value: 6.976074
       inSlope: 0.24981153
       outSlope: 0.24981153
       tangentMode: 0
@@ -210,6 +202,27 @@ MonoBehaviour:
   accel: 0
   decel: 0
   speed: 0
+--- !u!114 &6181276847595846569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131218788157190600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae2dd105ae15184ab653f13fceea5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 6
+  lowFallForce: 4
+  fallForce: 3
+  groundedArea: 0.05
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  coyoteTime: 0.1
+  jumpBufferTime: 0.1
 --- !u!114 &-1623518377664601420
 MonoBehaviour:
   m_ObjectHideFlags: 0
