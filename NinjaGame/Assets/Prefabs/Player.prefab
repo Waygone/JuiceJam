@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6458330052447446581}
   - component: {fileID: 6181276847595846569}
   - component: {fileID: -1623518377664601420}
+  - component: {fileID: 2867437928462518439}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -106,9 +107,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: aec386517a143384bb884422d1f57b9b, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &7671691004523407335
 BoxCollider2D:
@@ -161,8 +162,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.033057854
     - serializedVersion: 3
-      time: 1.003418
-      value: 6.976074
+      time: 0.5002221
+      value: 7.0235825
       inSlope: 0.24981153
       outSlope: 0.24981153
       tangentMode: 0
@@ -176,22 +177,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0050604064
+      time: 0.0005009335
       value: 0.99713564
-      inSlope: -0.9474683
-      outSlope: -0.9474683
+      inSlope: -13.042436
+      outSlope: -13.042436
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.03917548
+      outWeight: 0.028925601
     - serializedVersion: 3
-      time: 3.0042896
-      value: 0.009702329
-      inSlope: -0.084686816
-      outSlope: -0.084686816
+      time: 0.29654112
+      value: 0.006497983
+      inSlope: -1.2103775
+      outSlope: -1.2103775
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.12809914
+      inWeight: 0.09128632
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -214,9 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae2dd105ae15184ab653f13fceea5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 6
-  lowFallForce: 4
-  fallForce: 3
+  jumpForce: 5.5
+  lowFallForce: 5
+  fallForce: 3.5
   groundedArea: 0.05
   groundLayer:
     serializedVersion: 2
@@ -233,5 +234,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a89c67398bd9f564997c512a26dcaf82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2867437928462518439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131218788157190600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efd59ea800cacb4389f953d955936ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
