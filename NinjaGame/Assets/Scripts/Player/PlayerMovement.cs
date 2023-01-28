@@ -13,12 +13,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] bool accel = false;
     [SerializeField] bool decel = false;
     float time = 0;
+    bool dash;
     [SerializeField] float speed = 0;
-    
+    [SerializeField] float dashAmount;
+    [SerializeField] float speedtimer;
+    [SerializeField] float speedcountdown;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        speedtimer = speedcountdown;
+        // dash is set to max
     }
 
     private void Update()
@@ -29,6 +35,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalMovement != 0)
         {
+            if (Input.GetKeyDown(KeyCode.LeftShift) && speedtimer == speedcountdown)
+            {
+                //if player is moving and dash button is pressed
+                dash= true;
+            } else
+            {
+                dash = false;
+            }
             time += Time.deltaTime;
             if (horizontalMovement < 0)
             {
@@ -45,9 +59,25 @@ public class PlayerMovement : MonoBehaviour
             left = false;
             right = false;
         }
-        MoveUpdate(speed);
 
-        rb.velocity = new Vector3(movement.x, rb.velocity.y, 0);
+        MoveUpdate(speed);
+        if (!dash)
+        {
+            rb.velocity = new Vector3(movement.x, rb.velocity.y, 0);
+        } else if (dash)
+        {
+            speedtimer = speedcountdown;
+            speedtimer -= Time.deltaTime;
+            if (left)
+            {
+                rb.velocity = new Vector2(-dashAmount, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(dashAmount, rb.velocity.y);
+            }
+        }
+        
     }
 
     public Vector3 MoveUpdate(float speed)

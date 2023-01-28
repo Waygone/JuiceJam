@@ -1406,7 +1406,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6458330052447446581, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: dashTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458330052447446581, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: dashAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458330052447446581, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: dashCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2867437928462518439, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
 --- !u!114 &1061980925 stripped
 MonoBehaviour:

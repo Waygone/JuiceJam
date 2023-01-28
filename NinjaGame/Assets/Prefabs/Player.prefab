@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6458330052447446581}
   - component: {fileID: 6181276847595846569}
   - component: {fileID: -1623518377664601420}
-  - component: {fileID: 2867437928462518439}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -203,6 +202,9 @@ MonoBehaviour:
   accel: 0
   decel: 0
   speed: 0
+  dashAmount: 5
+  speedtimer: 0
+  speedcountdown: 2
 --- !u!114 &6181276847595846569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,17 +236,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a89c67398bd9f564997c512a26dcaf82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2867437928462518439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131218788157190600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efd59ea800cacb4389f953d955936ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
