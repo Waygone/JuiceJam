@@ -27,13 +27,11 @@ public class PlayerJump : MonoBehaviour
 
     private Rigidbody2D rb;
     private Collider2D coll;
-    AnimatorHandler animatorHandler;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
-        animatorHandler = GetComponent<AnimatorHandler>();
         jumpsLeft = maxJumps;
     }
 

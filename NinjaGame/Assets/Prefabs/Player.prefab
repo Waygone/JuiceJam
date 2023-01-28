@@ -202,7 +202,7 @@ MonoBehaviour:
   accel: 0
   decel: 0
   speed: 0
-  dashAmount: 5
+  dashAmount: 20
   speedtimer: 0
   speedcountdown: 2
 --- !u!114 &6181276847595846569
@@ -220,12 +220,14 @@ MonoBehaviour:
   jumpForce: 5.5
   lowFallForce: 5
   fallForce: 3.5
-  groundedArea: 0.05
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   coyoteTime: 0.1
+  groundedArea: 0.05
   jumpBufferTime: 0.1
+  maxJumps: 2
+  doubleJumpMultiplier: 1.2
 --- !u!114 &-1623518377664601420
 MonoBehaviour:
   m_ObjectHideFlags: 0
