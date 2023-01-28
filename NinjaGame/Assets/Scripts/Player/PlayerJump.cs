@@ -4,50 +4,48 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    //[SerializeField] private float jumpTime;
     [SerializeField] private float jumpForce;
     [SerializeField] private float lowFallForce;
     [SerializeField] private float fallForce;
 
-
-    //[SerializeField] private Transform groundCheck;
-    //[SerializeField] private float groundCheckRadius;
-
-
-    public float groundedArea = 0.1f;
     [SerializeField] private LayerMask groundLayer;
-
     [SerializeField] float coyoteTime = 0.25f;
+    public float groundedArea = 0.1f;
     private float coyoteTimeCounter;
 
+    
+    
     [SerializeField] float jumpBufferTime = 0.25f;
+    [SerializeField] private int maxJumps = 2;
+    [SerializeField] private float doubleJumpMultiplier = 1.2f;
     private float jumpBufferCounter;
-
-    Vector2 playerSize;
-
-    private void Awake()
-    {
-        playerSize = GetComponent<BoxCollider2D>().size;
-    }
+    private int jumpsLeft;
+    private bool isFirstJump = true;
 
     private bool jumpRequest;
-    private bool isGrounded;
+    private bool grounded;
 
     private Rigidbody2D rb;
-    
+    private Collider2D coll;
+    AnimatorHandler animatorHandler;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
+        animatorHandler = GetComponent<AnimatorHandler>();
+        jumpsLeft = maxJumps;
     }
 
     void Update()
     {
         var jumpInput = Input.GetButtonDown("Jump");
 
-        if (isGrounded)
+        if (grounded)
         {
             coyoteTimeCounter = coyoteTime;
+            isFirstJump = true;
+            if (rb.velocity.y <= 0) jumpsLeft = maxJumps;
         }
         else
         {
@@ -62,10 +60,19 @@ public class PlayerJump : MonoBehaviour
         {
             jumpBufferCounter -= Time.deltaTime;
         }
-        if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f)
+        if (isFirstJump)
+        {
+            if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && jumpsLeft > 0)
+            {
+                isFirstJump = false;
+                jumpRequest = true;
+                coyoteTimeCounter = 0f;
+            }
+        }
+        else if (jumpInput && jumpsLeft > 0)
         {
             jumpRequest = true;
-            coyoteTimeCounter = 0f;
+            isFirstJump = false;
         }
     }
 
@@ -73,18 +80,20 @@ public class PlayerJump : MonoBehaviour
     {
         if (jumpRequest)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            float m = isFirstJump? 1f : doubleJumpMultiplier;
+            rb.AddForce(Vector2.up * jumpForce * m, ForceMode2D.Impulse);
             jumpRequest = false;
-            isGrounded = false;
+            grounded = false;
+            jumpsLeft -= 1;
         }
         else
         {
-            Vector2 rayStart = (Vector2)transform.position + Vector2.down * playerSize.y * 0.5f;
-            isGrounded = Physics2D.Raycast(rayStart, Vector2.down, groundedArea, groundLayer);
+            //Vector2 rayStart = (Vector2)transform.position + Vector2.down * collider.y * 0.5f;
+            grounded = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, groundedArea, groundLayer);
         }
 
 
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y <= 2f)
         {
             rb.gravityScale = fallForce;
         }
@@ -93,5 +102,11 @@ public class PlayerJump : MonoBehaviour
             rb.gravityScale = lowFallForce;
         }
         else rb.gravityScale = 1f;
+    }
+
+    public bool IsGrounded()
+    {
+        grounded = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, groundedArea, groundLayer);
+        return grounded;
     }
 }
