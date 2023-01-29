@@ -7,6 +7,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float lowFallForce;
     [SerializeField] private float fallForce;
+    private float currentFallForce;
 
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] float coyoteTime = 0.25f;
@@ -27,13 +28,11 @@ public class PlayerJump : MonoBehaviour
 
     private Rigidbody2D rb;
     private Collider2D coll;
-    AnimatorHandler animatorHandler;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
-        animatorHandler = GetComponent<AnimatorHandler>();
         jumpsLeft = maxJumps;
     }
 
@@ -64,7 +63,6 @@ public class PlayerJump : MonoBehaviour
         {
             if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && jumpsLeft > 0)
             {
-                isFirstJump = false;
                 jumpRequest = true;
                 coyoteTimeCounter = 0f;
             }
@@ -73,6 +71,7 @@ public class PlayerJump : MonoBehaviour
         {
             jumpRequest = true;
             isFirstJump = false;
+            rb.gravityScale = 1f;
         }
     }
 
@@ -80,10 +79,11 @@ public class PlayerJump : MonoBehaviour
     {
         if (jumpRequest)
         {
-            float m = isFirstJump? 1f : doubleJumpMultiplier;
-            rb.AddForce(Vector2.up * jumpForce * m, ForceMode2D.Impulse);
+            currentFallForce = isFirstJump? fallForce : fallForce / 3;
+            rb.velocity = Vector2.up * jumpForce;
             jumpRequest = false;
             grounded = false;
+            isFirstJump = false;
             jumpsLeft -= 1;
         }
         else
@@ -93,15 +93,15 @@ public class PlayerJump : MonoBehaviour
         }
 
 
-        if (rb.velocity.y <= 2f)
+        if (rb.velocity.y < 0f)
         {
-            rb.gravityScale = fallForce;
+            rb.gravityScale = currentFallForce;
         }
         else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
         {
             rb.gravityScale = lowFallForce;
         }
-        else rb.gravityScale = 1f;
+        else rb.gravityScale = 1f;        
     }
 
     public bool IsGrounded()
