@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public float wallJumpForce;
     public float jumpBufferSet = 0.15f;
     public float turnTimerSet = 0.1f;
+    public float wallJumpTimerSet = 0.5f;
 
     //input
     private float movementInputDirection;
@@ -45,6 +46,9 @@ public class PlayerController : MonoBehaviour
     private bool canMove;
     private bool canFlip;
     private float turnTimer;
+    private float wallJumpTimer;
+    private bool hasWallJumped;
+    private int lastWallJumpDirection;
 
 
     private void Start()
@@ -205,6 +209,9 @@ public class PlayerController : MonoBehaviour
             turnTimer = 0;
             canMove = true;
             canFlip = true;
+            hasWallJumped = true;
+            wallJumpTimer = wallJumpTimerSet;
+            lastWallJumpDirection = -facingDirection;
         }
     }
 
@@ -246,6 +253,22 @@ public class PlayerController : MonoBehaviour
         if(isAttemptingToJump)
         {
             jumpBuffer -= Time.deltaTime;
+        }
+
+        if (wallJumpTimer > 0)
+        {
+            if (hasWallJumped && movementInputDirection == -lastWallJumpDirection)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -0.5f);
+                hasWallJumped= false;
+            } else if (wallJumpTimer <= 0)
+            {
+                hasWallJumped = false;
+            }
+            else
+            {
+                wallJumpTimer -= Time.deltaTime;
+            }
         }
     }
 
