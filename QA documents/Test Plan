@@ -52,7 +52,13 @@ Version 2: 2️⃣
       If obstacles are added and Player can take damage:
         Make sure the collisions feel right.
     
-    Player movement abilities: 🤾‍♀️
+    Player movement: 🤾‍♀️
+      Player still jumps if user presses jump right before Player hits the ground.
+      |
+      Player still jumps if user presses jump right after Player walks off a ledge. (Also called coyote time.)
+      |
+      Player movement otherwise feels good.
+      |
       If energy system added:
         Abilities drain energy meter.
         |
