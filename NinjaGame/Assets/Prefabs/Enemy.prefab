@@ -29,6 +29,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6660493576546787874}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2307538797050756537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7368534383368713692}
+  m_Layer: 0
+  m_Name: TouchDamgeCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7368534383368713692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2307538797050756537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.115, z: 0.1406616}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6660493576546787874}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3499537483773128226
@@ -63,6 +94,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7368534383368713692}
   - {fileID: 5088583760117894516}
   - {fileID: 6261673001987105536}
   m_Father: {fileID: 8236408559445458093}
@@ -234,15 +266,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 5088583760117894516}
   wallCheck: {fileID: 6261673001987105536}
-  knockbackSpeed: {x: 5, y: 5}
+  touchDamageCheck: {fileID: 7368534383368713692}
+  knockbackSpeed: {x: 10, y: 5}
   ground:
     serializedVersion: 2
     m_Bits: 131136
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 512
   movementSpeed: 2
   maxHp: 30
   knockbackDuration: 0.2
-  groundCheckDistance: 0.5
+  groundCheckDistance: 0.7
   wallCheckDistance: 0.1
+  touchDamageCooldown: 0.2
+  touchDamage: 10
+  touchDamageWidth: 0.4
+  touchDamageHeight: 0.6
+  hitParticle: {fileID: 6148682025565388923, guid: b9c8281641593334c871a5290a87f2ca, type: 3}
+  deathChunkParticle: {fileID: 0}
+  deathBloodParticle: {fileID: 0}
 --- !u!1 &8436970323874683186
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,5 +315,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6660493576546787874}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

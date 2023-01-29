@@ -50,6 +50,12 @@ public class PlayerController : MonoBehaviour
     private bool hasWallJumped;
     private int lastWallJumpDirection;
 
+    //Damage
+    private bool knockback;
+    private float knockbackStartTime;
+    [SerializeField] private float knockbackDuration;
+    [SerializeField] private Vector2 knockbackSpeed;
+
 
     private void Start()
     {
@@ -67,6 +73,7 @@ public class PlayerController : MonoBehaviour
         CanJump();
         CheckIfWallSliding();
         CheckJump();
+        CheckKnockback();
     }
 
     private void FixedUpdate()
@@ -124,11 +131,11 @@ public class PlayerController : MonoBehaviour
     //movement
     private void ApplyMovement()
     {
-        if (!isGrounded && !isWallSliding && movementInputDirection == 0)
+        if (!isGrounded && !isWallSliding && movementInputDirection == 0 && !knockback)
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-        else if (canMove)
+        else if (canMove && !knockback)
         {
             rb.velocity = new Vector2(movementInputDirection * movementSpeed, rb.velocity.y);
         }
@@ -171,7 +178,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Flip()
     {
-        if (!isWallSliding && canFlip)
+        if (!isWallSliding && canFlip && !knockback)
         {
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
@@ -317,6 +324,28 @@ public class PlayerController : MonoBehaviour
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, WhatIsGround);
     }
 
+    #endregion
+
+    #region Knockback
+    public void Knockback(int direction)
+    {
+        knockback = true;
+        knockbackStartTime = Time.time;
+        rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);
+    }
+    private void CheckKnockback()
+    {
+        if(Time.time >= knockbackStartTime + knockbackDuration && knockback)
+        {
+            knockback = false;
+            rb.velocity = new Vector2(0.0f, rb.velocity.y);
+        }
+    }
+    public bool GetDashStatus()
+    {
+        //return isDashing;
+        return false;
+    }
     #endregion
 
     #region gizmos

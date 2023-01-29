@@ -20,20 +20,26 @@ public class PlayerCombatController : MonoBehaviour
 
     
     private float lastInputTime = Mathf.NegativeInfinity;
-
+    private float[] attackDetails = new float[2];
 
     private Animator animator;
+    private PlayerController PC;
+    private PlayerStats PS;
 
     private void Start()
     {
-        animator= GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         animator.SetBool("canAttack", canAttack);
+        PC = GetComponent<PlayerController>();
+        PS = GetComponent<PlayerStats>();
     }
     private void Update()
     {
         CheckCombatInput();
         CheckAttacks();
     }
+
+    #region Combat
     private void CheckCombatInput()
     {
         if (Input.GetMouseButtonDown(0))
@@ -71,9 +77,11 @@ public class PlayerCombatController : MonoBehaviour
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attack1Radius, damageableLayer);
 
+        attackDetails[0] = attack1Damage; 
+        attackDetails[1] = transform.position.x;
+
         foreach(Collider2D collider in detectedObjects)
         {
-            float[] attackDetails = new float[] { attack1Damage, 0 };
             collider.transform.parent.SendMessage("Damage", attackDetails);
             print("Damge something");
             //Attack feedback
@@ -86,8 +94,32 @@ public class PlayerCombatController : MonoBehaviour
         animator.SetBool("isAttacking", isAttacking);
         animator.SetBool("attack1", false);
     }
+    #endregion
+
+    #region Take Damage
+    private void Damage(float[] attackDetails)
+    {
+        if (!PC.GetDashStatus())
+        {
+            int direction;
+
+            PS.TakeDamage(attackDetails[0]);
+
+            if (attackDetails[1] < transform.position.x)
+            {
+                direction = 1;
+            }
+            else { direction = -1; }
+
+            PC.Knockback(direction);
+        }
+    }
+    #endregion
+
+    #region DrawGizmos
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackHitBoxPos.position, attack1Radius);
     }
+    #endregion
 }
