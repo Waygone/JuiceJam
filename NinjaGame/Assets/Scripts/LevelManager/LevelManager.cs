@@ -5,12 +5,10 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     //OBJECTS
-    public Player player;
     public Transform enemyFolder;
     public Transform enemyPrefab;
 
     //LEVEL DATA
-    public Vector2 playerPos;
     public Vector2[] enemyPos;
 
     private void Start()
@@ -21,7 +19,6 @@ public class LevelManager : MonoBehaviour
     void setupLevel()
     {
         clearAll();
-        player.transform.position = new Vector2(playerPos.x, playerPos.y);
         spawnEnemies();
     }
 
