@@ -20,7 +20,7 @@ public class PlayerCombatController : MonoBehaviour
 
     
     private float lastInputTime = Mathf.NegativeInfinity;
-    private float[] attackDetails = new float[2];
+    private AttackDetails attackDetails;
 
     private Animator animator;
     private PlayerController PC;
@@ -77,13 +77,13 @@ public class PlayerCombatController : MonoBehaviour
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attack1Radius, damageableLayer);
 
-        attackDetails[0] = attack1Damage; 
-        attackDetails[1] = transform.position.x;
+        attackDetails.damageAmount = attack1Damage; 
+        attackDetails.position = transform.position;
 
         foreach(Collider2D collider in detectedObjects)
         {
             collider.transform.parent.SendMessage("Damage", attackDetails);
-            print("Damge something");
+            print("Damaged something");
             //Attack feedback
         }
     }
@@ -97,15 +97,15 @@ public class PlayerCombatController : MonoBehaviour
     #endregion
 
     #region Take Damage
-    private void Damage(float[] attackDetails)
+    private void Damage(AttackDetails attackDetails)
     {
         if (!PC.GetDashStatus())
         {
             int direction;
 
-            PS.TakeDamage(attackDetails[0]);
+            PS.TakeDamage(attackDetails.damageAmount);
 
-            if (attackDetails[1] < transform.position.x)
+            if (attackDetails.position.x < transform.position.x)
             {
                 direction = 1;
             }

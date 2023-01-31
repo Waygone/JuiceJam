@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CVC = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
+        Screen.SetResolution(640, 360, FullScreenMode.FullScreenWindow, 60);
     }
     private void Update()
     {
