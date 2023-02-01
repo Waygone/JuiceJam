@@ -85,8 +85,6 @@ public class PlayerCombatController : MonoBehaviour
         foreach(Collider2D collider in detectedObjects)
         {
             collider.transform.parent.SendMessage("Damage", attackDetails);
-            print("Damaged something");
-            //Attack feedback
         }
     }
 

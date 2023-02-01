@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CVC = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
-        Screen.SetResolution(640, 360, FullScreenMode.FullScreenWindow, 60);
+        Screen.SetResolution(1280, 720, FullScreenMode.FullScreenWindow, 60);
     }
     private void Update()
     {
@@ -35,9 +36,16 @@ public class GameManager : MonoBehaviour
     {
         if(Time.time >= respawnTimeStart + respawnTime && respawn)
         {
-            var playerTemp = Instantiate(player, respawnPoint);
+            /*var playerTemp = Instantiate(player, respawnPoint);
             CVC.m_Follow = playerTemp.transform;
-            respawn = false;
+            respawn = false;*/
+            ReloadScene();
         }
+    }
+
+    public void ReloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }

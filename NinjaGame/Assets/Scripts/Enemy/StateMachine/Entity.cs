@@ -24,8 +24,9 @@ public class Entity : MonoBehaviour
         ledgeCheck,
         playerCheck,
         groundCheck;
+    [SerializeField] protected Transform textPosition;
 
-    private float currentHp;
+    protected float currentHp;
     private float currentStunResistance;
     private float lastDamageTime;
 

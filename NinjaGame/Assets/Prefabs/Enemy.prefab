@@ -93,6 +93,37 @@ Transform:
   m_Father: {fileID: 6660493576546787874}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3095426746921669542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2805734273533335548}
+  m_Layer: 7
+  m_Name: TextPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2805734273533335548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3095426746921669542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.67, y: 0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6660493576546787874}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3192914911004299698
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +194,7 @@ Transform:
   - {fileID: 8660751605806400312}
   - {fileID: 9162393848481440308}
   - {fileID: 3601345181771674023}
+  - {fileID: 2805734273533335548}
   m_Father: {fileID: 8236408559445458093}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -378,6 +410,7 @@ MonoBehaviour:
   ledgeCheck: {fileID: 5088583760117894516}
   playerCheck: {fileID: 8660751605806400312}
   groundCheck: {fileID: 3601345181771674023}
+  textPosition: {fileID: 2805734273533335548}
   meleeAttackPosition: {fileID: 9162393848481440308}
   idleStateData: {fileID: 11400000, guid: 9103637da7c5df2409fabfa843c327f2, type: 2}
   moveStateData: {fileID: 11400000, guid: 10a287ee45e0a034cbdcf3adc4806a97, type: 2}
@@ -387,6 +420,9 @@ MonoBehaviour:
   meleeAttackStateData: {fileID: 11400000, guid: cce0cb98cc0dee74093d27acf49852d6, type: 2}
   stunStateData: {fileID: 11400000, guid: d70c4f277b5a2d64d9cec9d757e8b26d, type: 2}
   deadStateData: {fileID: 11400000, guid: 0395c87116212ad4a8bf62d103f0c68a, type: 2}
+  score: {fileID: 0}
+  scorePoints: 5
+  FloatingTextPrefab: {fileID: 4026182701877223908, guid: b7afc705adef8594fac9cb1daa21cbd0, type: 3}
 --- !u!1 &8436970323874683186
 GameObject:
   m_ObjectHideFlags: 0

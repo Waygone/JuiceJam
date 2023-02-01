@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UIElements;
 
 public class Enemy_1 : Entity
 {
@@ -30,6 +30,10 @@ public class Enemy_1 : Entity
     [SerializeField] private D_StunState stunStateData;
     [SerializeField] private D_DeadState deadStateData;
 
+    [SerializeField] private Score score;
+    [SerializeField] private float scorePoints = 5f;
+    public GameObject FloatingTextPrefab;
+
     public override void Start()
     {
         base.Start();
@@ -56,13 +60,43 @@ public class Enemy_1 : Entity
     {
         base.Damage(attackDetails);
 
+        ShowFloatingText(attackDetails.damageAmount.ToString(), Random.Range(30, 70), GetRandomColor(), TextAnchor.UpperLeft);
+        ShowFloatingText(currentHp.ToString(), Random.Range(30, 70), Color.red, TextAnchor.LowerRight);
+        CameraShake.Instance.ShakeCamera(5f, 0.1f);
+
         if (isDead)
         {
+            score.UpdateScore(scorePoints);
             stateMachine.ChangeState(deadState);
+
+            CameraShake.Instance.ShakeCamera(10f * (1 + (score.comboCount / 10)), 0.2f);
+            ShowFloatingText("ComboX" + score.comboCount, Random.Range(60, 80), Color.white, TextAnchor.MiddleCenter);
         }
         else if (isStunned && stateMachine.currentState != stunState)
         {
             stateMachine.ChangeState(stunState);
         }
+    }
+
+    private void ShowFloatingText(string message, int fontSize, Color color, TextAnchor anchor)
+    {
+        if (FloatingTextPrefab)
+        {
+            GameObject prefab = Instantiate(FloatingTextPrefab, textPosition.position, Quaternion.identity);
+            prefab.GetComponentInChildren<TextMesh>().text = message;
+            prefab.GetComponentInChildren<TextMesh>().fontSize = fontSize;
+            prefab.GetComponentInChildren<TextMesh>().color = color;
+            prefab.GetComponentInChildren<TextMesh>().anchor = anchor;
+            prefab.GetComponentInChildren<MeshRenderer>().sortingLayerName = "ForeGround";
+        }
+
+    }
+
+    private Color GetRandomColor()
+    {
+        return new Color(
+      Random.Range(0f, 1f),
+      Random.Range(0f, 1f),
+      Random.Range(0f, 1f));
     }
 }
