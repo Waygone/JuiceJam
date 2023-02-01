@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd18456f3a89d84a80f18ea95eaf42f, type: 3}
   m_Name: Enemy1_PlayerDetectedStateData
   m_EditorClassIdentifier: 
-  longRangeActionTime: 0.8
+  longRangeActionTime: 0.5

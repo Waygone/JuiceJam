@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Enemy1_LookForPlayerStateData
   m_EditorClassIdentifier: 
   amountOfTurns: 2
-  timeBetweenTurns: 0.8
+  timeBetweenTurns: 0.6

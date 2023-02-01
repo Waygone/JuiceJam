@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4d82036770be7499bdf205804e4ce5, type: 3}
   m_Name: Enemy1_BaseData
   m_EditorClassIdentifier: 
+  maxHp: 50
+  damageKnockbackSpeed: 12
   wallCheckDistance: 0.2
-  ledgeCheckDistance: 0.6
+  ledgeCheckDistance: 1
+  groundCheckRadius: 0.2
   closeRangeActionDistance: 0.5
+  hitParticle: {fileID: 6148682025565388923, guid: b9c8281641593334c871a5290a87f2ca, type: 3}
+  stunResistance: 3
+  stunRecoveryTime: 2
   minAgroDistance: 3
   maxAgroDistance: 4
   ground:

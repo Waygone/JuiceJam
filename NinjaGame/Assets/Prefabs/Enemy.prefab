@@ -93,6 +93,37 @@ Transform:
   m_Father: {fileID: 6660493576546787874}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3192914911004299698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3601345181771674023}
+  m_Layer: 7
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3601345181771674023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192914911004299698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.543, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6660493576546787874}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3499537483773128226
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +162,7 @@ Transform:
   - {fileID: 6261673001987105536}
   - {fileID: 8660751605806400312}
   - {fileID: 9162393848481440308}
+  - {fileID: 3601345181771674023}
   m_Father: {fileID: 8236408559445458093}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -345,6 +377,7 @@ MonoBehaviour:
   wallCheck: {fileID: 6261673001987105536}
   ledgeCheck: {fileID: 5088583760117894516}
   playerCheck: {fileID: 8660751605806400312}
+  groundCheck: {fileID: 3601345181771674023}
   meleeAttackPosition: {fileID: 9162393848481440308}
   idleStateData: {fileID: 11400000, guid: 9103637da7c5df2409fabfa843c327f2, type: 2}
   moveStateData: {fileID: 11400000, guid: 10a287ee45e0a034cbdcf3adc4806a97, type: 2}
@@ -352,6 +385,8 @@ MonoBehaviour:
   chargeStateData: {fileID: 11400000, guid: fb8106acf4f5d914aa96d8796e0dd937, type: 2}
   lookForPlayerStateData: {fileID: 11400000, guid: 59087e21059f24c48adec5b48e37c752, type: 2}
   meleeAttackStateData: {fileID: 11400000, guid: cce0cb98cc0dee74093d27acf49852d6, type: 2}
+  stunStateData: {fileID: 11400000, guid: d70c4f277b5a2d64d9cec9d757e8b26d, type: 2}
+  deadStateData: {fileID: 11400000, guid: 0395c87116212ad4a8bf62d103f0c68a, type: 2}
 --- !u!1 &8436970323874683186
 GameObject:
   m_ObjectHideFlags: 0

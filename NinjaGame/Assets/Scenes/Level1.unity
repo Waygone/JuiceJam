@@ -3588,6 +3588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3282719408264536068, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
+      propertyPath: stunDamageAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ce67b4eb4e208499321310462df78b, type: 3}
 --- !u!1001 &3769448222556638307
