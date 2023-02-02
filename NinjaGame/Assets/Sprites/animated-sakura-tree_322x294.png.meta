@@ -1,0 +1,1455 @@
+fileFormatVersion: 2
+guid: 0faf9d90cc780d44a9475ce6ce70508f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2058
+        width: 309
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d818a34e42d5f944bfcead2d247c771
+      internalID: -533713305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 2058
+        width: 313
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6ba93d13bac6d42930980cac632711
+      internalID: -1680891612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_2
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 2058
+        width: 313
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78c3dc552412734f9f7cfe24df87897
+      internalID: 901635865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_3
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 2058
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abde6cca5b8763049bd22fb16d394339
+      internalID: 2095518572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_4
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 2058
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c9763baf11c534e90304bb5b5b7738
+      internalID: -1039995702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_5
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 2058
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1b9af54e2e91d409e390a6743d9352
+      internalID: 1739031407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_6
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 2058
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a8518837899744aadc478385ab567c
+      internalID: -2011710129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_7
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 2058
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c963f6c6f1547b641a349cd83a660850
+      internalID: 986193245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1764
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f17bc173dc7e643aa3ad15dc567912
+      internalID: -2068004970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_9
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1764
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3546017ec627c7d419413b228b9ff95e
+      internalID: -960143602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_10
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1764
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c8c1481ef6d19428b5518dc8011b80
+      internalID: 600875883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_11
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1764
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661c29907545c8f4e97bc1e02488ff22
+      internalID: 12118077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_12
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 1764
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4604b1494a2895140bbcc91922125c2d
+      internalID: -132937630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_13
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 1764
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3908937d6eb5045bda18e33d488966
+      internalID: 379596661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_14
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1764
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85027b777eceacf429e8e4f1e87bbf7d
+      internalID: -1590189565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_15
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 1764
+        width: 316
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0600bbe0d596b8146a97606e482ab885
+      internalID: 242262455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1471
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2102b7792f9cfbf439e6f61cb16c0ca4
+      internalID: -575287244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_17
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1471
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cd51e59e112114b83699363e4698af
+      internalID: -1495397288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_18
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1471
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c6bb8916cf430408f71431dd8b1f01
+      internalID: -1986541982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_19
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1471
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bd0cdf9882d884aa51edae2529b3a4
+      internalID: -1427170734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_20
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1471
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2020f25d5a6f2aa4e84820f9d3a5d029
+      internalID: 338216484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_21
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 1471
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968ec830f43f0814c81507796de35b70
+      internalID: -2005420784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_22
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1471
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03f9c8487385814b9c85857ef679d99
+      internalID: -1931744067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_23
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 1471
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb2fc50f5499d34e834b0309a839295
+      internalID: -1798229238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be2a24ce3b82874ea698b27ef4a5ada
+      internalID: 473781751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_25
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66907227eaf54540a91dc431d53bf07
+      internalID: -263898564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_26
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45881f8ae1c4078429f1aec8197472b4
+      internalID: 201091473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_27
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe73f113023a0c34291fd8811aa09868
+      internalID: 1780953616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_28
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3378323ce1e94f4882bfb5c964c3cc8
+      internalID: 1444511455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_29
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e763f3d58a636b4ba1318b72a807f67
+      internalID: 1908787921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_30
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe97499bab23cc84fbbebbfa646e659b
+      internalID: -637804684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_31
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 1177
+        width: 317
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33ed756a7aeca8418ba5242cfa96ceb
+      internalID: -1353693937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_32
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4ddd88407cf0d40b71cb816197e608
+      internalID: -2069137899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_33
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841fefbd73f85864e814acc77ae27587
+      internalID: -1770400162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_34
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126054355a16bb04cb9b1f741d934a86
+      internalID: 1749297301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_35
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564040af55466db4e977771e69637267
+      internalID: -472453596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_36
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e131db6280900534e8f06a84517c35da
+      internalID: -1624404147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_37
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d10d72deae4b44fba37f25c38ca627
+      internalID: -1205484123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_38
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc287c8be5b49c4083ecc5598c7dc50
+      internalID: 1716739694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_39
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 882
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac07ddb3efaf794a90aa62e736f45c5
+      internalID: -1931195291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 588
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b87ae09c74de34dae7744130005d00
+      internalID: -1233232518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_41
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 588
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e16897d0a77e844841b3daf4fb80b3
+      internalID: 820119378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_42
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 588
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c739071a919eff4eb8915bacca50622
+      internalID: -1380953611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_43
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 588
+        width: 316
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75a6d51a1c1c94458cd57acfcdca425
+      internalID: 342647135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_44
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 588
+        width: 316
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023073404a85e5748b6443c3c503abe1
+      internalID: 1936697664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_45
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 588
+        width: 316
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1536fc9585b0fc444abfeaa8ae14b10b
+      internalID: 1438825867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_46
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 588
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a8e67a04dbce340acb5d641668a3ad
+      internalID: -513622379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_47
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 588
+        width: 317
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6995da305411a964dad244dcb800b764
+      internalID: 503961345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_48
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 295
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7525b334ae7f25846b034137e47ba78c
+      internalID: -1911545807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_49
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 295
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efa524d3e33c4d42aa8b27ceed5a53c
+      internalID: 2022031559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_50
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 295
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8358921cf5d4c424ba4d5e4ba3fe1a0d
+      internalID: -1220063222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_51
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 295
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9982f55798ce44fa7e0d7b806f08f2
+      internalID: 1027447523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_52
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 295
+        width: 317
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5c52fc1fe23a14da4717a1c8c9c3d9
+      internalID: -442585918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_53
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 295
+        width: 316
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeaf3c9217caa144394182edd454a5cc
+      internalID: -1732150971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_54
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 295
+        width: 316
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe870ca11893b3439b4200177a0c9c2
+      internalID: -409640241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_55
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 295
+        width: 316
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8796f4535a18dd744a255aa6711f7a59
+      internalID: -291345650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_56
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 316
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca547cec076e5f940b3bb34064056b7d
+      internalID: -1854719046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_57
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1
+        width: 316
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0555e7a3629c675419851b7a38cd08e4
+      internalID: 58410848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_58
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 1
+        width: 314
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8af7ee9c5801b4aa2d4553db94aede
+      internalID: -654110100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated-sakura-tree_322x294_59
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1
+        width: 314
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb1b2937041bce41adf5d5bca07cf1e
+      internalID: 548790526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      animated-sakura-tree_322x294_11: 12118077
+      animated-sakura-tree_322x294_35: -472453596
+      animated-sakura-tree_322x294_54: -409640241
+      animated-sakura-tree_322x294_27: 1780953616
+      animated-sakura-tree_322x294_46: -513622379
+      animated-sakura-tree_322x294_47: 503961345
+      animated-sakura-tree_322x294_56: -1854719046
+      animated-sakura-tree_322x294_43: 342647135
+      animated-sakura-tree_322x294_1: -1680891612
+      animated-sakura-tree_322x294_25: -263898564
+      animated-sakura-tree_322x294_44: 1936697664
+      animated-sakura-tree_322x294_9: -960143602
+      animated-sakura-tree_322x294_50: -1220063222
+      animated-sakura-tree_322x294_3: 2095518572
+      animated-sakura-tree_322x294_22: -1931744067
+      animated-sakura-tree_322x294_28: 1444511455
+      animated-sakura-tree_322x294_41: 820119378
+      animated-sakura-tree_322x294_7: 986193245
+      animated-sakura-tree_322x294_57: 58410848
+      animated-sakura-tree_322x294_29: 1908787921
+      animated-sakura-tree_322x294_2: 901635865
+      animated-sakura-tree_322x294_26: 201091473
+      animated-sakura-tree_322x294_58: -654110100
+      animated-sakura-tree_322x294_48: -1911545807
+      animated-sakura-tree_322x294_30: -637804684
+      animated-sakura-tree_322x294_45: 1438825867
+      animated-sakura-tree_322x294_36: -1624404147
+      animated-sakura-tree_322x294_5: 1739031407
+      animated-sakura-tree_322x294_0: -533713305
+      animated-sakura-tree_322x294_33: -1770400162
+      animated-sakura-tree_322x294_40: -1233232518
+      animated-sakura-tree_322x294_53: -1732150971
+      animated-sakura-tree_322x294_34: 1749297301
+      animated-sakura-tree_322x294_32: -2069137899
+      animated-sakura-tree_322x294_18: -1986541982
+      animated-sakura-tree_322x294_52: -442585918
+      animated-sakura-tree_322x294_37: -1205484123
+      animated-sakura-tree_322x294_39: -1931195291
+      animated-sakura-tree_322x294_12: -132937630
+      animated-sakura-tree_322x294_31: -1353693937
+      animated-sakura-tree_322x294_10: 600875883
+      animated-sakura-tree_322x294_13: 379596661
+      animated-sakura-tree_322x294_14: -1590189565
+      animated-sakura-tree_322x294_15: 242262455
+      animated-sakura-tree_322x294_19: -1427170734
+      animated-sakura-tree_322x294_49: 2022031559
+      animated-sakura-tree_322x294_55: -291345650
+      animated-sakura-tree_322x294_6: -2011710129
+      animated-sakura-tree_322x294_21: -2005420784
+      animated-sakura-tree_322x294_59: 548790526
+      animated-sakura-tree_322x294_20: 338216484
+      animated-sakura-tree_322x294_4: -1039995702
+      animated-sakura-tree_322x294_51: 1027447523
+      animated-sakura-tree_322x294_8: -2068004970
+      animated-sakura-tree_322x294_42: -1380953611
+      animated-sakura-tree_322x294_38: 1716739694
+      animated-sakura-tree_322x294_16: -575287244
+      animated-sakura-tree_322x294_17: -1495397288
+      animated-sakura-tree_322x294_24: 473781751
+      animated-sakura-tree_322x294_23: -1798229238
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
