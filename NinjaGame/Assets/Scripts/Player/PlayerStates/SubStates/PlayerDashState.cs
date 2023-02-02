@@ -49,6 +49,9 @@ public class PlayerDashState : PlayerAbilityState
 
         if (!isExitingState)
         {
+            player.Animator.SetFloat("yVelocity", player.CurrentVelocity.y);
+            player.Animator.SetFloat("xVelocity", Mathf.Abs(player.CurrentVelocity.x));
+
             if (isHolding)
             {
                 dashDirectionInput = player.InputHandler.RawDashDirectionInput;
