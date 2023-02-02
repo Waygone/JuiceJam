@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555459871380491236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49, y: -0.02, z: 0}
+  m_LocalPosition: {x: 0.266, y: -0.156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2567985377659256467}
   - component: {fileID: 6575862806330936351}
   m_Layer: 9
-  m_Name: Player
+  m_Name: OldPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 2989948269391536707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2066237288370556536}
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_SortingLayerID: -584076669
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1900830683, guid: 175ade1ae3619f240bec1ebb3c712332, type: 3}
+  m_Sprite: {fileID: 1589528035, guid: f8c27af933338bf4d913500f939e4e5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,18 +137,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.044467635, y: -0.15803075}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.96, y: 1.28}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.7, y: 1.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3054905, y: 0.9067708}
+  m_Size: {x: 0.175766, y: 0.65189874}
   m_EdgeRadius: 0
 --- !u!50 &6870850289801921904
 Rigidbody2D:
@@ -184,27 +184,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 2066237288370556536}
-  wallCheck: {fileID: 8365063335646232234}
-  wallJumpDirection: {x: 1, y: 2}
   movementSpeed: 8
   jumpForce: 14
-  groundCheckRadius: 0.15
+  groundCheckRadius: 0.3
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 64
   amountOfJumps: 2
-  wallCheckDistance: 0.4
-  wallSlidingSpeed: 2
   movementForceInAir: 50
   airDragMultiplier: 0.95
   variableJumpHeightMultiplier: 0.5
-  wallJumpForce: 14
   jumpBufferSet: 0.15
-  turnTimerSet: 0.1
-  wallJumpTimerSet: 0.5
-  canWallJump: 0
   knockbackDuration: 0.1
   knockbackSpeed: {x: 10, y: 5}
+  standingTime: 0
 --- !u!114 &3282719408264536068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +214,7 @@ MonoBehaviour:
   inputTimer: 0.2
   attack1Radius: 0.3
   attack1Damage: 10
+  stunDamageAmount: 1
   attackHitBoxPos: {fileID: 9056034301540531094}
   damageableLayer:
     serializedVersion: 2
@@ -315,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7606773776419872279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.115, y: -0.484, z: 0}
+  m_LocalPosition: {x: 0.044, y: -0.464, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

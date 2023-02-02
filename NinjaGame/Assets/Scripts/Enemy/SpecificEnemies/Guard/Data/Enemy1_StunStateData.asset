@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c48631d0fa863e4292e670c15c3ec91, type: 3}
   m_Name: Enemy1_StunStateData
   m_EditorClassIdentifier: 
-  stunTime: 1
+  stunTime: 0
   stunKnockbackTime: 0.2
   stunKnockbackSpeed: 6
   stunKnockbackAngle: {x: 1, y: 2}
