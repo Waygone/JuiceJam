@@ -8,10 +8,13 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private float
         inputTimer,
-        attack1Radius,
-        attack1Damage;
+        attackRadius,
+        slashRadius,
+        attackDamage,
+        slashDamage;
     [SerializeField] private float stunDamageAmount = 1f;
     [SerializeField] private Transform attackHitBoxPos;
+    [SerializeField] private Transform slashHitBoxPos;
     [SerializeField] private LayerMask damageableLayer;
 
     private bool 
@@ -77,9 +80,9 @@ public class PlayerCombatController : MonoBehaviour
 
     private void CheckAttackHitBox()
     {
-        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attack1Radius, damageableLayer);
+        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attackRadius, damageableLayer);
 
-        attackDetails.damageAmount = attack1Damage; 
+        attackDetails.damageAmount = attackDamage; 
         attackDetails.position = transform.position;
         attackDetails.stunAmount = stunDamageAmount;
 
@@ -89,11 +92,28 @@ public class PlayerCombatController : MonoBehaviour
         }
     }
 
+    private void CheckSlashHitBox()
+    {
+        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(slashHitBoxPos.position, slashRadius, damageableLayer);
+
+        attackDetails.damageAmount = slashDamage;
+        attackDetails.position = transform.position;
+        attackDetails.stunAmount = stunDamageAmount;
+
+        foreach (Collider2D collider in detectedObjects)
+        {
+            print("a");
+            collider.transform.parent.SendMessage("Damage", attackDetails);
+        }
+    }
+
     private void FinishAttacking()
     {
-        isAttacking = false;
-        animator.SetBool("isAttacking", isAttacking);
         animator.SetBool("attack1", false);
+    }
+    private void FinishSlashing()
+    {
+        animator.SetBool("slash", false);
     }
     #endregion
 
@@ -120,7 +140,8 @@ public class PlayerCombatController : MonoBehaviour
     #region DrawGizmos
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(attackHitBoxPos.position, attack1Radius);
+        Gizmos.DrawWireSphere(attackHitBoxPos.position, attackRadius);
+        Gizmos.DrawWireSphere(slashHitBoxPos.position, slashRadius);
     }
     #endregion
 }

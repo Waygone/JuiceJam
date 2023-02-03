@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField]
     private GameObject 
-        deathChunkParticle, 
+        deathPiecesParticle, 
         deathBloodParticle;
 
     private GameManager GM;
@@ -33,7 +33,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Die()
     {
-        Instantiate(deathChunkParticle, transform.position, deathChunkParticle.transform.rotation);
+        Instantiate(deathPiecesParticle, transform.position, deathPiecesParticle.transform.rotation);
         Instantiate(deathBloodParticle, transform.position, deathBloodParticle.transform.rotation);
 
         GM.Respawn();
