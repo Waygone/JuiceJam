@@ -8,7 +8,7 @@ public class MenuButtons : MonoBehaviour
     private const string LEVEL_1 = "Level1";
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(LEVEL_1);
     }
     public void RepeatLevel()
     {

@@ -173,6 +173,17 @@
                 },
                 {
                     "name": "",
+                    "id": "08441805-cb94-47ff-978f-6a7a48aeee17",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "247e2488-0829-4f6c-8613-66061b63dee4",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
@@ -218,7 +229,7 @@
                 {
                     "name": "",
                     "id": "d1d2702f-4dd5-4d30-9757-a393aaedf5a5",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
