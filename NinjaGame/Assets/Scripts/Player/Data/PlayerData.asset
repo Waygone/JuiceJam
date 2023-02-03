@@ -31,6 +31,7 @@ MonoBehaviour:
   drag: 15
   dashEndYMultiplier: 0.4
   distanceBetweenTrail: 0.6
+  useFixedDirection: 0
   coyoteTime: 1
   jumpHeightMultiplier: 0.5
   groundCheckRadius: 0.3

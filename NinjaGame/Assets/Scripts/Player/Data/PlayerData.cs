@@ -29,6 +29,7 @@ public class PlayerData : ScriptableObject
     public float drag = 10f;
     public float dashEndYMultiplier = 0.2f;
     public float distanceBetweenTrail = 0.5f;
+    public bool useFixedDirection = true;
 
     [Header("Air State")]
     public float coyoteTime = 0.2f;
