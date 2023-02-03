@@ -69,7 +69,7 @@ public class PlayerCombatController : MonoBehaviour
                 isFirstAttack = !isFirstAttack;
                 animator.SetBool("attack1", true);
                 animator.SetBool("firstAttack", isFirstAttack);
-                //animator.SetBool("isAttacking", isAttacking);
+                animator.SetBool("isAttacking", isAttacking);
             }
         }
         if(Time.time >= lastInputTime + inputTimer)
@@ -102,13 +102,14 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects)
         {
-            print("a");
             collider.transform.parent.SendMessage("Damage", attackDetails);
         }
     }
 
     private void FinishAttacking()
     {
+        isAttacking = false;
+        animator.SetBool("isAttacking", isAttacking);
         animator.SetBool("attack1", false);
     }
     private void FinishSlashing()

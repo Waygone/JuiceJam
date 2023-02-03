@@ -190,11 +190,11 @@ GameObject:
   - component: {fileID: 5321916851109292411}
   - component: {fileID: 5321916851109292414}
   - component: {fileID: 5321916851109292408}
+  - component: {fileID: 2311025534296901257}
+  - component: {fileID: 8419172800083674204}
   - component: {fileID: 5321916851109292415}
   - component: {fileID: 5321916851109292412}
   - component: {fileID: 5321916851109292413}
-  - component: {fileID: 8419172800083674204}
-  - component: {fileID: 2311025534296901257}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -430,6 +430,45 @@ MonoBehaviour:
   attacking: 0
   parrying: 0
   inputHoldTime: 0.2
+--- !u!114 &2311025534296901257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321916851109292409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde500148577cfd43b522915a7d1f235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canAttack: 1
+  inputTimer: 0.2
+  attackRadius: 0.6
+  slashRadius: 0.8
+  attackDamage: 10
+  slashDamage: 20
+  stunDamageAmount: 1
+  attackHitBoxPos: {fileID: 2091099561330458253}
+  slashHitBoxPos: {fileID: 6323918632871618927}
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &8419172800083674204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321916851109292409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56135a9bf13a98c41af9bf895d07525d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 50
+  deathPiecesParticle: {fileID: 7702600082436932825, guid: 6a0bc84ac87f9c249bef605509f346dd, type: 3}
+  deathBloodParticle: {fileID: 4231204015692936900, guid: 1c6be500cd2729b44b2fdb0a8ae7f3e4, type: 3}
 --- !u!95 &5321916851109292415
 Animator:
   serializedVersion: 5
@@ -497,42 +536,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.7}
   m_EdgeRadius: 0
---- !u!114 &8419172800083674204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5321916851109292409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56135a9bf13a98c41af9bf895d07525d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 50
-  deathPiecesParticle: {fileID: 7702600082436932825, guid: 6a0bc84ac87f9c249bef605509f346dd, type: 3}
-  deathBloodParticle: {fileID: 4231204015692936900, guid: 1c6be500cd2729b44b2fdb0a8ae7f3e4, type: 3}
---- !u!114 &2311025534296901257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5321916851109292409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cde500148577cfd43b522915a7d1f235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canAttack: 1
-  inputTimer: 0.2
-  attackRadius: 0.6
-  slashRadius: 0.8
-  attackDamage: 10
-  slashDamage: 20
-  stunDamageAmount: 1
-  attackHitBoxPos: {fileID: 2091099561330458253}
-  slashHitBoxPos: {fileID: 6323918632871618927}
-  damageableLayer:
-    serializedVersion: 2
-    m_Bits: 128

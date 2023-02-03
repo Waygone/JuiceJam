@@ -49,7 +49,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         if (context.canceled)
         {
-            //attacking = false;
+            attacking = false;
         }
     }
     public void OnParryInput(InputAction.CallbackContext context)

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Enemy1_ChargeStateData
   m_EditorClassIdentifier: 
   chargeSpeed: 4
-  chargeTime: 0.3
+  chargeTime: 3
