@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     public PlayerInAirState InAirState { get; private set; }
     public PlayerLandState LandState { get; private set; }
     public PlayerDashState DashState { get; private set; }
+    public PlayerAttackState AttackState { get; private set; }
+    public PlayerAttackState ParryState { get; private set; }
     #endregion
 
     #region Components
@@ -25,11 +28,14 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
 
     public Transform DashDirectionIndicator { get; private set; }
+
+    public PlayerStats Stats;
     #endregion
 
     #region Check Variables
 
     [SerializeField] private Transform groundCheck;
+    //[SerializeField] public Transform attackHitBoxPos;
 
     #endregion
 
@@ -38,6 +44,16 @@ public class Player : MonoBehaviour
     private Vector2 workSpace;
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
+
+    public bool IsAttackFinished { get; private set; }
+
+    private bool canFlip;
+
+    //Damage
+    private bool knockback;
+    private float knockbackStartTime;
+
+    private AttackDetails attackDetails;
 
     #endregion
 
@@ -52,15 +68,21 @@ public class Player : MonoBehaviour
         InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
         LandState = new PlayerLandState(this, StateMachine, playerData, "land");
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
+
+        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        ParryState = new PlayerAttackState(this, StateMachine, playerData, "parry");
     }
     private void Start()
     {
         Animator = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
+        Stats = GetComponent<PlayerStats>();
         DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         FacingDirection = 1;
 
+        canFlip = true;
+        //IsAttackFinished = true;
         StateMachine.Initialize(IdleState);
     }
     private void Update()
@@ -89,7 +111,7 @@ public class Player : MonoBehaviour
         CurrentVelocity = workSpace;
     }
 
-    public void SetVelocityY(float velocity) 
+    public void SetVelocityY(float velocity)
     {
         workSpace.Set(CurrentVelocity.x, velocity);
         rb.velocity = workSpace;
@@ -103,12 +125,30 @@ public class Player : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
     }
+    private void CheckKnockback()
+    {
+        if (Time.time >= knockbackStartTime + playerData.knockbackDuration && knockback)
+        {
+            knockback = false;
+            rb.velocity = new Vector2(0.0f, rb.velocity.y);
+        }
+    }
     public void CheckIfShouldFlip(int xInput)
     {
-        if(xInput != 0 && xInput != FacingDirection)
+        if (xInput != 0 && xInput != FacingDirection)
         {
             Flip();
         }
+    }
+    #endregion
+
+    #region Damage
+
+    public void Knockback(int direction)
+    {
+        knockback = true;
+        knockbackStartTime = Time.time;
+        rb.velocity = new Vector2(playerData.knockbackSpeed.x * direction, playerData.knockbackSpeed.y);
     }
     #endregion
 
@@ -119,8 +159,17 @@ public class Player : MonoBehaviour
     private void AnimationFinishTriggerFunction() => StateMachine.CurrentState.AnimationFinishTrigger();
     private void Flip()
     {
-        FacingDirection *= -1;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+        if (canFlip)
+        {
+            FacingDirection *= -1;
+            transform.Rotate(0.0f, 180.0f, 0.0f);
+        }
     }
+
+    private void DisableFlip() => canFlip = false;
+    private void EnableFlip() => canFlip = true;
+
+    public bool GetDashStatus() => false;
+
     #endregion
 }

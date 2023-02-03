@@ -15,12 +15,20 @@ MonoBehaviour:
   movementVelocity: 6
   jumpForce: 20
   amountOfJumps: 2
+  aproxDamage: 10
+  stunDamage: 1
+  attackRadius: 0.6
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  knockbackDuration: 0.2
+  knockbackSpeed: {x: 5, y: 8}
   dashCooldown: 1
-  maxHoldTime: 1
-  holdTimeScale: 0.25
+  maxHoldTime: 0.6
+  holdTimeScale: 0.2
   dashTime: 0.2
   dashForce: 30
-  drag: 12
+  drag: 15
   dashEndYMultiplier: 0.4
   distanceBetweenTrail: 0.6
   coyoteTime: 1

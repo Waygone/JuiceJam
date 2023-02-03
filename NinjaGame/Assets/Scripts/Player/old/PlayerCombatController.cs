@@ -24,14 +24,14 @@ public class PlayerCombatController : MonoBehaviour
     private AttackDetails attackDetails;
 
     private Animator animator;
-    private PlayerController PC;
+    private Player player;
     private PlayerStats PS;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         animator.SetBool("canAttack", canAttack);
-        PC = GetComponent<PlayerController>();
+        player = GetComponent<Player>();
         PS = GetComponent<PlayerStats>();
     }
     private void Update()
@@ -43,11 +43,12 @@ public class PlayerCombatController : MonoBehaviour
     #region Combat
     private void CheckCombatInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (player.InputHandler.attacking)
         {
             if(canAttack)
             {
                 //Combat
+                player.InputHandler.attacking = false;
                 gotInput = true;
                 lastInputTime = Time.time;
             }
@@ -65,7 +66,7 @@ public class PlayerCombatController : MonoBehaviour
                 isFirstAttack = !isFirstAttack;
                 animator.SetBool("attack1", true);
                 animator.SetBool("firstAttack", isFirstAttack);
-                animator.SetBool("isAttacking", isAttacking);
+                //animator.SetBool("isAttacking", isAttacking);
             }
         }
         if(Time.time >= lastInputTime + inputTimer)
@@ -88,7 +89,7 @@ public class PlayerCombatController : MonoBehaviour
         }
     }
 
-    private void FinishAttack1()
+    private void FinishAttacking()
     {
         isAttacking = false;
         animator.SetBool("isAttacking", isAttacking);
@@ -99,7 +100,7 @@ public class PlayerCombatController : MonoBehaviour
     #region Take Damage
     private void Damage(AttackDetails attackDetails)
     {
-        if (!PC.GetDashStatus())
+        if (!player.GetDashStatus())
         {
             int direction;
 
@@ -111,7 +112,7 @@ public class PlayerCombatController : MonoBehaviour
             }
             else { direction = -1; }
 
-            PC.Knockback(direction);
+            player.Knockback(direction);
         }
     }
     #endregion

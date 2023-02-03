@@ -66,7 +66,10 @@ public class Enemy_1 : Entity
 
         if (isDead)
         {
-            score.UpdateScore(scorePoints);
+            if (score != null)
+            {
+                score.UpdateScore(scorePoints);
+            }
             stateMachine.ChangeState(deadState);
 
             CameraShake.Instance.ShakeCamera(10f * (1 + (score.comboCount / 10)), 0.2f);

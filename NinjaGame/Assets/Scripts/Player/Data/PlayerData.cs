@@ -12,6 +12,14 @@ public class PlayerData : ScriptableObject
     public float jumpForce = 10f;
     public int amountOfJumps = 1;
 
+    [Header("Attack State")]
+    public float aproxDamage = 10f;
+    public float stunDamage = 1f;
+    public float attackRadius = .3f;
+    public LayerMask damageableLayer;
+    public float knockbackDuration = .2f;
+    public Vector2 knockbackSpeed = new Vector2(5,8);
+
     [Header("Dash State")]
     public float dashCooldown = 1f;
     public float maxHoldTime = 1f;

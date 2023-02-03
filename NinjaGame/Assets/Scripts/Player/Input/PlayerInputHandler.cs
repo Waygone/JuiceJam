@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DashInput { get; private set;}
     public bool DashInputStop { get; private set;}
 
+    public bool attacking, parrying;
+
     [SerializeField] private float inputHoldTime = .2f;
 
     private float jumpInputStartTime, dashInputStartTime;
@@ -27,6 +30,10 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+
+        int countAttacks = Enum.GetValues(typeof(CombatInputs)).Length;
+        attacking = false;
+        parrying = false;
     }
     private void Update()
     {
@@ -34,12 +41,35 @@ public class PlayerInputHandler : MonoBehaviour
         CheckDashInputHoldTime();
     }
 
+    public void OnPrimaryAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            attacking = true;
+        }
+        if (context.canceled)
+        {
+            //attacking = false;
+        }
+    }
+    public void OnParryInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            parrying = true;
+        }
+        if (context.canceled)
+        {
+            parrying = false;
+        }
+    }
+
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
 
-        NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
-        NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
+        NormInputX = Mathf.RoundToInt(RawMovementInput.x);
+        NormInputY = Mathf.RoundToInt(RawMovementInput.y);
     }
 
     public void OnDashInput(InputAction.CallbackContext context)
@@ -101,4 +131,10 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void UseJumpInput() => JumpInput = false;
     public void UseDashInput() => DashInput = false;
+}
+
+public enum CombatInputs
+{
+    primary,
+    secondary
 }
