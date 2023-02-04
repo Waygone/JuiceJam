@@ -11,7 +11,7 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2Int DashDirectionInput { get; private set;}
 
     private PlayerInput playerInput;
-    [SerializeField] private Camera mainCamera;
+    private Camera mainCamera;
 
     public int NormInputX { get; private set;}
     public int NormInputY { get; private set;}
@@ -31,14 +31,18 @@ public class PlayerInputHandler : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
 
+        mainCamera =  GameObject.Find("Main Camera").GetComponent<Camera>();
         int countAttacks = Enum.GetValues(typeof(CombatInputs)).Length;
         attacking = false;
         parrying = false;
     }
     private void Update()
     {
-        CheckJumpInputHoldTime();
-        CheckDashInputHoldTime();
+        if (Time.time != 0f)
+        {
+            CheckJumpInputHoldTime();
+            CheckDashInputHoldTime();
+        }
     }
 
     public void OnPrimaryAttackInput(InputAction.CallbackContext context)
@@ -66,10 +70,13 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        RawMovementInput = context.ReadValue<Vector2>();
+        if (Time.time != 0f)
+        {
+            RawMovementInput = context.ReadValue<Vector2>();
 
-        NormInputX = Mathf.RoundToInt(RawMovementInput.x);
-        NormInputY = Mathf.RoundToInt(RawMovementInput.y);
+            NormInputX = Mathf.RoundToInt(RawMovementInput.x);
+            NormInputY = Mathf.RoundToInt(RawMovementInput.y);
+        }
     }
 
     public void OnDashInput(InputAction.CallbackContext context)

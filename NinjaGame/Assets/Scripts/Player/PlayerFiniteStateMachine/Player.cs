@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         LandState = new PlayerLandState(this, StateMachine, playerData, "land");
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
 
-        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack1");
         ParryState = new PlayerAttackState(this, StateMachine, playerData, "parry");
     }
     private void Start()

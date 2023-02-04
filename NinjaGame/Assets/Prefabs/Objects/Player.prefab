@@ -262,7 +262,7 @@ SpriteRenderer:
   m_SortingLayerID: -584076669
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1589528035, guid: f8c27af933338bf4d913500f939e4e5e, type: 3}
+  m_Sprite: {fileID: 2107392824, guid: 7c370b36fb55e7045a97e2293a63c34b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -426,7 +426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a73b642b82c75b44a832058122fce60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
   attacking: 0
   parrying: 0
   inputHoldTime: 0.2
@@ -443,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canAttack: 1
-  inputTimer: 0.2
+  inputTimer: 0.1
   attackRadius: 0.6
   slashRadius: 0.8
   attackDamage: 10

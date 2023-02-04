@@ -25,7 +25,7 @@ MonoBehaviour:
   knockbackSpeed: {x: 5, y: 8}
   dashCooldown: 1
   maxHoldTime: 0.6
-  holdTimeScale: 0.2
+  holdTimeScale: 0.4
   dashTime: 0.2
   dashForce: 30
   drag: 15

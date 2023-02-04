@@ -33,9 +33,9 @@ RectTransform:
   m_Father: {fileID: 1892590163634628788}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 100, y: -70}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -150, y: -70}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1892590162050026476
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 60.00
+  m_text: 180.00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d8d6efd09e99c34e85d8b66db7baad0, type: 2}
   m_sharedMaterial: {fileID: -6586863445376115564, guid: 4d8d6efd09e99c34e85d8b66db7baad0, type: 2}
@@ -168,10 +168,10 @@ RectTransform:
   m_Father: {fileID: 1892590163634628788}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -150, y: -70}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -430, y: -70}
+  m_SizeDelta: {x: 380, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1892590162162956041
 CanvasRenderer:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 0'
+  m_text: 'Score: 100'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d8d6efd09e99c34e85d8b66db7baad0, type: 2}
   m_sharedMaterial: {fileID: -6586863445376115564, guid: 4d8d6efd09e99c34e85d8b66db7baad0, type: 2}

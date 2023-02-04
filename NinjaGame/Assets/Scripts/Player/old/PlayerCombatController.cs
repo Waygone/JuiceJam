@@ -82,7 +82,7 @@ public class PlayerCombatController : MonoBehaviour
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attackRadius, damageableLayer);
 
-        attackDetails.damageAmount = attackDamage; 
+        attackDetails.damageAmount = (int)Random.Range(attackDamage, attackDamage + attackDamage / 1.5f); 
         attackDetails.position = transform.position;
         attackDetails.stunAmount = stunDamageAmount;
 
