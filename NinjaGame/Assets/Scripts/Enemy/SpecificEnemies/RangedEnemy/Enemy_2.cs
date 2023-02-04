@@ -9,18 +9,23 @@ public class Enemy_2 : Entity
     public E2_PlayerDetectedState playerDetectedState { get; private set; }
     public E2_ShootState shootState { get; private set; }
 
+    public E2_DeadState deadState { get; private set; }
+
     #endregion
 
     [SerializeField]  public D_LookForPlayerState lookForPlayerStateData;
     [SerializeField] public D_PlayerDetectedState playerDetectedStateData;
     [SerializeField] public D_ShootState shootStateData;
+    [SerializeField] public D_DeadState deadStateData;
 
     [SerializeField] private Transform attackPosition;
 
     [SerializeField] private Score score;
     [SerializeField] private float scorePoints = 5f;
     public GameObject FloatingTextPrefab;
-    public GameObject arrow;
+    public GameObject arrowPrefab;
+
+    [SerializeField] public float fireRate = 2f;
 
     public override void Start()
     {
@@ -29,11 +34,17 @@ public class Enemy_2 : Entity
         lookForPlayerState = new E2_LookForPlayerState(stateMachine, this, "idle", lookForPlayerStateData, this);
         playerDetectedState = new E2_PlayerDetectedState(stateMachine, this, "playerDetected", playerDetectedStateData,this);
         shootState = new E2_ShootState(stateMachine, this, "shoot", attackPosition, shootStateData,this);
-
+        deadState = new E2_DeadState(stateMachine, this, "dead", deadStateData, this);
 
         stateMachine.Initialize(lookForPlayerState);
     }
 
+    public void ShootArrow()
+    {
+        Instantiate(arrowPrefab, attackPosition.position, Quaternion.identity);
+    }
+
+    #region Damage and Death
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
@@ -52,10 +63,6 @@ public class Enemy_2 : Entity
 
             CameraShake.Instance.ShakeCamera(10f * (1 + (score.comboCount / 10)), 0.2f);
             ShowFloatingText("ComboX" + score.comboCount, Random.Range(60, 80), Color.white, TextAnchor.MiddleCenter);
-        }
-        else if (isStunned && stateMachine.currentState != stunState)
-        {
-            stateMachine.ChangeState(stunState);
         }
     }
     private void ShowFloatingText(string message, int fontSize, Color color, TextAnchor anchor)
@@ -79,6 +86,7 @@ public class Enemy_2 : Entity
       Random.Range(0f, 1f),
       Random.Range(0f, 1f));
     }
+    #endregion
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();

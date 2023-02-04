@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56135a9bf13a98c41af9bf895d07525d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 50
+  maxHp: 100
   deathPiecesParticle: {fileID: 7702600082436932825, guid: 6a0bc84ac87f9c249bef605509f346dd, type: 3}
   deathBloodParticle: {fileID: 4231204015692936900, guid: 1c6be500cd2729b44b2fdb0a8ae7f3e4, type: 3}
   healthBar: {fileID: 0}

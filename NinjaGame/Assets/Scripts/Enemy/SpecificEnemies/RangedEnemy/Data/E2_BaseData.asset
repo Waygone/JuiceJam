@@ -17,12 +17,12 @@ MonoBehaviour:
   wallCheckDistance: 0.1
   ledgeCheckDistance: 0.8
   groundCheckRadius: 0.3
-  closeRangeActionDistance: 1
+  closeRangeActionDistance: 12
   hitParticle: {fileID: 6148682025565388923, guid: b9c8281641593334c871a5290a87f2ca, type: 3}
   stunResistance: 3
   stunRecoveryTime: 0
-  minAgroDistance: 2
-  maxAgroDistance: 4
+  minAgroDistance: 12
+  maxAgroDistance: 14
   ground:
     serializedVersion: 2
     m_Bits: 64

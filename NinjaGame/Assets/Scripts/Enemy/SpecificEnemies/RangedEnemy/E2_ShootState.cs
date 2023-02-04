@@ -5,19 +5,30 @@ using UnityEngine;
 public class E2_ShootState : AttackState
 {
     private Enemy_2 enemy;
+    private D_ShootState stateData;
+
+    protected AttackDetails attackDetails;
+
+    private float fireRateTimer = 0f;
+
     public E2_ShootState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_ShootState stateData, Enemy_2 enemy) : base(stateMachine, entity, animBoolName, attackPosition)
     {
         this.enemy = enemy;
+        this.stateData = stateData;
     }
 
     public override void DoChecks()
     {
         base.DoChecks();
+
+        CheckArrowSpawn();
     }
 
     public override void Enter()
     {
         base.Enter();
+        //attackDetails.damageAmount = stateData.attackDamage;
+        //attackDetails.position = entity.enemyGO.transform.position;
     }
 
     public override void Exit()
@@ -42,5 +53,27 @@ public class E2_ShootState : AttackState
     public override void TriggerAttack()
     {
         base.TriggerAttack();
+
+        /*Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPosition.position, stateData.attackRadius, stateData.whatIsPlayer);
+
+        foreach (Collider2D collider in detectedObjects)
+        {
+            collider.transform.SendMessage("Damage", attackDetails);
+        }*/
+        Debug.Log("Damaging player (kinda)");
+    }
+
+    private void CheckArrowSpawn()
+    {
+        fireRateTimer += Time.deltaTime;
+        if(fireRateTimer > enemy.fireRate)
+        {
+            fireRateTimer = 0;
+            Shoot();
+        }
+    }
+    private void Shoot()
+    {
+        enemy.ShootArrow();
     }
 }

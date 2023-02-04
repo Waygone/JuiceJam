@@ -14403,7 +14403,14 @@ MonoBehaviour:
   textPosition: {fileID: 1620309140}
   lookForPlayerStateData: {fileID: 11400000, guid: 3a9be21460d777149b5f24277600ff64, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 0faf4d73b0349414382a11f8634c429d, type: 2}
-  meleeAttackPosition: {fileID: 1059697313}
+  shootStateData: {fileID: 11400000, guid: b52ebea587302c14ab92fbd0af66a9bf, type: 2}
+  deadStateData: {fileID: 11400000, guid: c209e89ba77a2534a95912367a58b0b5, type: 2}
+  attackPosition: {fileID: 1059697313}
+  score: {fileID: 1788814679}
+  scorePoints: 5
+  FloatingTextPrefab: {fileID: 4026182701877223908, guid: b7afc705adef8594fac9cb1daa21cbd0, type: 3}
+  arrowPrefab: {fileID: 6375290144438629127, guid: ec7cf0845f8175b4db049cb9e13336ae, type: 3}
+  fireRate: 1
 --- !u!4 &448940383
 Transform:
   m_ObjectHideFlags: 0
@@ -14412,7 +14419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448940381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.16, y: 10.89, z: 6.5330825}
+  m_LocalPosition: {x: 14.13, y: 10.96, z: 6.5330825}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14591,7 +14598,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557630063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.74, y: -0.09, z: 0.00870968}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16500,7 +16507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059697313}
   m_Layer: 7
-  m_Name: MeleeAttackPosition
+  m_Name: AttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

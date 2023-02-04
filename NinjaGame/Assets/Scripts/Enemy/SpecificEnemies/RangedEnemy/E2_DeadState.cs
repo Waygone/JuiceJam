@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy2_DeadState : DeadState
+public class E2_DeadState : DeadState
 {
     private Enemy_2 enemy;
-    public Enemy2_DeadState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_DeadState stateData, Enemy_2 enemy) : base(stateMachine, entity, animBoolName, stateData)
+    public E2_DeadState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_DeadState stateData, Enemy_2 enemy) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.enemy = enemy;
     }

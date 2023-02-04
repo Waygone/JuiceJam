@@ -32,8 +32,8 @@ public class E2_PlayerDetectedState : PlayerDetectedState
 
         if (performLongRangeAction)
         {
-            Debug.Log("Shooting");
-            //stateMachine.ChangeState(enemy.chargeState);
+            
+            stateMachine.ChangeState(enemy.shootState);
         }
         else if (!isPlayerInMaxAgroRange)
         {
