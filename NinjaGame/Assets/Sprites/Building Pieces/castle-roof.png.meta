@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -4104,18 +4116,18 @@ TextureImporter:
       castle-roof_46: 410682867
       castle-roof_162: -522718388
       castle-roof_52: -1106640900
-      castle-roof_64: 546982110
+      castle-roof_140: -519494038
       castle-roof_60: -44209330
+      castle-roof_64: 546982110
       castle-roof_69: 935321319
       castle-roof_55: 1355555444
       castle-roof_111: -1318710610
+      castle-roof_157: 479426769
       castle-roof_7: 50893203
       castle-roof_122: 409164744
-      castle-roof_140: -519494038
       castle-roof_44: -599746924
       castle-roof_121: -1756990282
       castle-roof_75: -1921907510
-      castle-roof_157: 479426769
       castle-roof_70: 1270289346
       castle-roof_93: -1221203221
       castle-roof_171: 1219175420
@@ -4178,10 +4190,10 @@ TextureImporter:
       castle-roof_24: -1227417508
       castle-roof_146: 1053620485
       castle-roof_154: -341723563
-      castle-roof_18: 1101768069
-      castle-roof_136: -1172716683
-      castle-roof_4: 235109437
       castle-roof_84: 162023449
+      castle-roof_18: 1101768069
+      castle-roof_4: 235109437
+      castle-roof_136: -1172716683
       castle-roof_147: 701489242
       castle-roof_25: -39162048
       castle-roof_89: -1123356207

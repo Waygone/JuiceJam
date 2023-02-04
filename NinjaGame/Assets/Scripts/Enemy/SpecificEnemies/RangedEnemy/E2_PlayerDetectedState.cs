@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E2_IdleState : IdleState
+public class E2_PlayerDetectedState : PlayerDetectedState
 {
     private Enemy_2 enemy;
-    public E2_IdleState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_IdleState stateData, Enemy_2 enemy) : base(stateMachine, entity, animBoolName, stateData)
+    public E2_PlayerDetectedState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_PlayerDetectedState stateData, Enemy_2 enemy) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.enemy = enemy;
     }
@@ -29,13 +29,9 @@ public class E2_IdleState : IdleState
     {
         base.LogicUpdate();
 
-        if (isPlayerInMinAgroRange)
+        if (performCloseRangeAction)
         {
-            stateMachine.ChangeState(enemy.playerDetectedState);
-        }
-        else if (isIdleTimeOver)
-        {
-            stateMachine.ChangeState(enemy.moveState);
+            stateMachine.ChangeState(enemy.meleeAttackState);
         }
     }
 

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField]
-    private float maxHp;
+    private int maxHp;
 
     [SerializeField]
     private GameObject 
@@ -15,6 +15,9 @@ public class PlayerStats : MonoBehaviour
 
     private GameManager GM;
     [NonSerialized] public float currentHp;
+
+    [SerializeField] public HealthBar healthBar;
+
     private Rigidbody2D rb;
 
     private bool isDead = false;
@@ -27,6 +30,8 @@ public class PlayerStats : MonoBehaviour
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         spriteColor = GetComponent<SpriteRenderer>().color;
         rb = GetComponent<Rigidbody2D>();
+
+        healthBar.SetMaxHp(maxHp);
     }
     private void Update()
     {
@@ -37,12 +42,15 @@ public class PlayerStats : MonoBehaviour
             GetComponent<SpriteRenderer>().color = spriteColor;
             rb.bodyType = RigidbodyType2D.Dynamic;
             currentHp = maxHp;
+            healthBar.SetHealth((int)currentHp);
             isDead = false;
         }
     }
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
+        healthBar.SetHealth((int)currentHp);
+
         if (currentHp <= 0.0f)
         {
             if (!isDead)
