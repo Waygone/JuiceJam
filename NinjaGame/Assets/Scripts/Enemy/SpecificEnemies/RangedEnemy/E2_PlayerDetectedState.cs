@@ -30,10 +30,14 @@ public class E2_PlayerDetectedState : PlayerDetectedState
     {
         base.LogicUpdate();
 
-        if (performCloseRangeAction)
+        if (performLongRangeAction)
         {
-            Debug.Log("");
-            //stateMachine.ChangeState(enemy.meleeAttackState);
+            Debug.Log("Shooting");
+            //stateMachine.ChangeState(enemy.chargeState);
+        }
+        else if (!isPlayerInMaxAgroRange)
+        {
+            stateMachine.ChangeState(enemy.lookForPlayerState);
         }
     }
 
