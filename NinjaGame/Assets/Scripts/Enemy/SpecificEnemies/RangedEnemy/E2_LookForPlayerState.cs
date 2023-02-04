@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class E2_LookForPlayerState : LookForPlayerState
@@ -32,12 +31,11 @@ public class E2_LookForPlayerState : LookForPlayerState
 
         if (isPlayerInMinAgroRange)
         {
-            Debug.Log("Detected Player");
-            stateMachine.ChangeState(enemy.playerDetectedState);
+            //stateMachine.ChangeState(enemy.playerDetectedState);
         }
-        else if (isAllTurnsOver)
+        else if (false)
         {
-            stateMachine.ChangeState(enemy.lookForPlayerState);
+            //stateMachine.ChangeState(enemy.moveState);
         }
     }
 
