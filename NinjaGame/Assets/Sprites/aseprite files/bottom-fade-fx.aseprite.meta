@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: b71ee6d83a34ba1438f64535e7482d8b
+<<<<<<<< HEAD:NinjaGame/Assets/Scenes/HighScore.unity.meta
+guid: f764ab89403496d468cc9294b9726d80
+========
+guid: 37cec0a1536e1da44b002e6595a3d20b
+>>>>>>>> Vola's_NEW-EmergencyFile:NinjaGame/Assets/Sprites/aseprite files/bottom-fade-fx.aseprite.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
