@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E2_ShootState : AttackState
+public class Enemy2_DeadState : DeadState
 {
     private Enemy_2 enemy;
-    public E2_ShootState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_ShootState stateData, Enemy_2 enemy) : base(stateMachine, entity, animBoolName, attackPosition)
+    public Enemy2_DeadState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_DeadState stateData, Enemy_2 enemy) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.enemy = enemy;
     }
@@ -24,23 +24,14 @@ public class E2_ShootState : AttackState
     {
         base.Exit();
     }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
-        if (!isPlayerInMinAgroRange)
-        {
-            stateMachine.ChangeState(enemy.lookForPlayerState);
-        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-    }
-
-    public override void TriggerAttack()
-    {
-        base.TriggerAttack();
     }
 }
