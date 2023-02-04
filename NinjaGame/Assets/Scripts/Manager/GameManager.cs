@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         if(Time.time >= respawnTimeStart + respawnTime && respawn)
         {
+            print("Respawned");
             //var playerTemp = Instantiate(player, respawnPoint.position, Quaternion.Euler(0f,0f,0f), transform);
             player.transform.position = respawnPoint.position;
             hasAlreadyRespawned = true;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class E2_PlayerDetectedState : PlayerDetectedState
@@ -31,7 +32,8 @@ public class E2_PlayerDetectedState : PlayerDetectedState
 
         if (performCloseRangeAction)
         {
-            stateMachine.ChangeState(enemy.meleeAttackState);
+            Debug.Log("");
+            //stateMachine.ChangeState(enemy.meleeAttackState);
         }
     }
 

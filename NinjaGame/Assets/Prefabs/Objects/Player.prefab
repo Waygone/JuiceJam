@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2217814974715405946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.255, y: -0.076, z: 0}
+  m_LocalPosition: {x: 0.303, y: -0.103, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -394,6 +394,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ed6490b2-3a77-4dfa-b59b-9576e6414b45
     m_ActionName: Gameplay/SecondaryAttack[/Mouse/rightButton,/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c0aec550-a7e0-47bf-9d40-e67a547993f8
+    m_ActionName: Menus/Pause[/Keyboard/escape,/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -412,7 +416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 31f4a1d0fc60e4c4bbff58d2fea60ec7, type: 2}
-  Stats: {fileID: 0}
   groundCheck: {fileID: 5321916850829957231}
 --- !u!114 &5321916851109292408
 MonoBehaviour:
@@ -443,7 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canAttack: 1
   inputTimer: 0.1
-  attackRadius: 0.6
+  attackRadius: 0.71
   slashRadius: 0.8
   attackDamage: 10
   slashDamage: 20
@@ -468,6 +471,8 @@ MonoBehaviour:
   maxHp: 50
   deathPiecesParticle: {fileID: 7702600082436932825, guid: 6a0bc84ac87f9c249bef605509f346dd, type: 3}
   deathBloodParticle: {fileID: 4231204015692936900, guid: 1c6be500cd2729b44b2fdb0a8ae7f3e4, type: 3}
+  healthBar: {fileID: 0}
+  isDead: 0
 --- !u!95 &5321916851109292415
 Animator:
   serializedVersion: 5

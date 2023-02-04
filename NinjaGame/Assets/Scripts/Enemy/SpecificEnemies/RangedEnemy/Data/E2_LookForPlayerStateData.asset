@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ffc43341fb87249916f0a8f939185f, type: 3}
-  m_Name: E2_IdleStateData
+  m_Script: {fileID: 11500000, guid: 4c425629cc22a0f48ba365320501d650, type: 3}
+  m_Name: E2_LookForPlayerStateData
   m_EditorClassIdentifier: 
-  minIdleTime: 1
-  maxIdleTime: 2
+  amountOfTurns: 2
+  timeBetweenTurns: 0.8

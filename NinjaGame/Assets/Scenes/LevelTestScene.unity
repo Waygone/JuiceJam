@@ -14467,10 +14467,8 @@ MonoBehaviour:
   playerCheck: {fileID: 523344000}
   groundCheck: {fileID: 1746129278}
   textPosition: {fileID: 1620309140}
-  moveStateData: {fileID: 11400000, guid: 8cf5e6120003e92409c3979050ac2c54, type: 2}
-  idleStateData: {fileID: 11400000, guid: b147648b71e3775489a4d93a7ded5104, type: 2}
+  lookForPlayerStateData: {fileID: 11400000, guid: 3a9be21460d777149b5f24277600ff64, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 0faf4d73b0349414382a11f8634c429d, type: 2}
-  meleeAttackStateData: {fileID: 11400000, guid: 602861e0f9b711e41bdf7d949bd4a4bf, type: 2}
   meleeAttackPosition: {fileID: 1059697313}
 --- !u!4 &448940383
 Transform:
@@ -66553,6 +66551,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[6].m_ActionName
       value: Menus/Pause[/Keyboard/escape,/Keyboard/p]
       objectReference: {fileID: 0}
+    - target: {fileID: 5321916851109292414, guid: 172bf2f291463284885e98af7aada5bc, type: 3}
+      propertyPath: Stats
+      value: 
+      objectReference: {fileID: 1872427881}
     - target: {fileID: 8419172800083674204, guid: 172bf2f291463284885e98af7aada5bc, type: 3}
       propertyPath: healthBar
       value: 
@@ -66564,6 +66566,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5321916851109292410, guid: 172bf2f291463284885e98af7aada5bc, type: 3}
   m_PrefabInstance: {fileID: 1872427876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872427881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8419172800083674204, guid: 172bf2f291463284885e98af7aada5bc, type: 3}
+  m_PrefabInstance: {fileID: 1872427876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56135a9bf13a98c41af9bf895d07525d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895760834
 GameObject:
   m_ObjectHideFlags: 0

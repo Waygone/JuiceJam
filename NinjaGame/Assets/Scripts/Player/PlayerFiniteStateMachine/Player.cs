@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour
 
     public Transform DashDirectionIndicator { get; private set; }
 
-    public PlayerStats Stats;
+    [NonSerialized] public PlayerStats Stats;
     #endregion
 
     #region Check Variables

@@ -22,6 +22,7 @@ public class PlayerCombatController : MonoBehaviour
         isAttacking, 
         isFirstAttack;
 
+
     
     private float lastInputTime = Mathf.NegativeInfinity;
     private AttackDetails attackDetails;
@@ -39,8 +40,12 @@ public class PlayerCombatController : MonoBehaviour
     }
     private void Update()
     {
-        CheckCombatInput();
-        CheckAttacks();
+        if (Time.timeScale != 0 && !player.Stats.isDead)
+        {
+            CheckCombatInput();
+            CheckAttacks();
+
+        }
     }
 
     #region Combat
@@ -114,7 +119,7 @@ public class PlayerCombatController : MonoBehaviour
     }
     private void FinishSlashing()
     {
-        animator.SetBool("slash", false);
+        animator.SetBool("dash", false);
     }
     #endregion
 

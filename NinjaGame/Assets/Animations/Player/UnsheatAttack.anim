@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack1
+  m_Name: UnsheatAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,39 +21,39 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 764624721, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.05882353
+    - time: 0.02
       value: {fileID: -875157055, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.11764706
+    - time: 0.04
       value: {fileID: 1235874911, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.1764706
+    - time: 0.06
       value: {fileID: 713069848, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.23529412
+    - time: 0.08
       value: {fileID: 2121674210, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.29411766
+    - time: 0.1
       value: {fileID: 1801276269, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.3529412
+    - time: 0.12
       value: {fileID: -2054071303, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.4117647
+    - time: 0.14
       value: {fileID: -1941131457, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.47058824
+    - time: 0.16
       value: {fileID: -629489970, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.5294118
+    - time: 0.18
       value: {fileID: -22580605, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.5882353
+    - time: 0.2
       value: {fileID: -2127497418, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.64705884
+    - time: 0.22
       value: {fileID: 816324175, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.7058824
+    - time: 0.24
       value: {fileID: 780623656, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.7647059
+    - time: 0.26
       value: {fileID: -1787491527, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
-    - time: 0.8235294
+    - time: 0.28
       value: {fileID: -991456772, guid: fb08b15a82f47504f92c87ad163c1db4, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 17
+  m_SampleRate: 50
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -88,7 +88,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.88235295
+    m_StopTime: 0.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -108,22 +108,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.23529412
+  - time: 0.08
     functionName: CheckAttackHitBox
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.7647059
+  - time: 0.28
     functionName: FinishAttacking
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8235294
-    functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

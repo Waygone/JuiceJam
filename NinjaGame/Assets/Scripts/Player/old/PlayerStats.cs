@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     private Color spriteColor;
 
@@ -61,7 +61,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         Instantiate(deathPiecesParticle, transform.position, deathPiecesParticle.transform.rotation);
         Instantiate(deathBloodParticle, transform.position, deathBloodParticle.transform.rotation);

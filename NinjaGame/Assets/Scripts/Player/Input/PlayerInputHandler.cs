@@ -6,20 +6,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    public Vector2 RawMovementInput { get; private set;}
-    public Vector2 RawDashDirectionInput { get; private set;}
-    public Vector2Int DashDirectionInput { get; private set;}
+    public Vector2 RawMovementInput { get; private set; }
+    public Vector2 RawDashDirectionInput { get; private set; }
+    public Vector2Int DashDirectionInput { get; private set; }
 
     private PlayerInput playerInput;
     private Camera mainCamera;
+    private Player player;
 
-    public int NormInputX { get; private set;}
-    public int NormInputY { get; private set;}
-    public bool JumpInput { get; private set;}
-    public bool JumpInputStop { get; private set;}
+    public int NormInputX { get; private set; }
+    public int NormInputY { get; private set; }
+    public bool JumpInput { get; private set; }
+    public bool JumpInputStop { get; private set; }
 
-    public bool DashInput { get; private set;}
-    public bool DashInputStop { get; private set;}
+    public bool DashInput { get; private set; }
+    public bool DashInputStop { get; private set; }
 
     public bool attacking, parrying;
 
@@ -31,7 +32,8 @@ public class PlayerInputHandler : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
 
-        mainCamera =  GameObject.Find("Main Camera").GetComponent<Camera>();
+        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        player = GetComponent<Player>();
         int countAttacks = Enum.GetValues(typeof(CombatInputs)).Length;
         attacking = false;
         parrying = false;
@@ -47,13 +49,16 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnPrimaryAttackInput(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (!player.Stats.isDead && Time.time != 0f)
         {
-            attacking = true;
-        }
-        if (context.canceled)
-        {
-            attacking = false;
+            if (context.started)
+            {
+                attacking = true;
+            }
+            if (context.canceled)
+            {
+                attacking = false;
+            }
         }
     }
     public void OnParryInput(InputAction.CallbackContext context)
@@ -81,15 +86,18 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDashInput(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (!player.Stats.isDead && Time.time != 0f)
         {
-            DashInput = true;
-            DashInputStop = false;
-            dashInputStartTime = Time.time;
-        }
-        else if (context.canceled)
-        {
-            DashInputStop = true;
+            if (context.started)
+            {
+                DashInput = true;
+                DashInputStop = false;
+                dashInputStartTime = Time.time;
+            }
+            else if (context.canceled)
+            {
+                DashInputStop = true;
+            }
         }
     }
 
@@ -122,7 +130,7 @@ public class PlayerInputHandler : MonoBehaviour
     }
     private void CheckJumpInputHoldTime()
     {
-        if(Time.time >= jumpInputStartTime + inputHoldTime)
+        if (Time.time >= jumpInputStartTime + inputHoldTime)
         {
             JumpInput = false;
         }

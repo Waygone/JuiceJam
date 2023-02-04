@@ -47,7 +47,7 @@ public class PlayerDashState : PlayerAbilityState
     {
         base.LogicUpdate();
 
-        if (!isExitingState)
+        if (!isExitingState && Time.timeScale != 0 && !player.Stats.isDead)
         {
             player.Animator.SetFloat("yVelocity", player.CurrentVelocity.y);
             player.Animator.SetFloat("xVelocity", Mathf.Abs(player.CurrentVelocity.x));

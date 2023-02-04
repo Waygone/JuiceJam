@@ -16,6 +16,7 @@ public class Score : MonoBehaviour
     [SerializeField] private float comboTime;
     [SerializeField] private float levelTime;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private Player player;
 
     public float comboCount { get; private set; }
     private bool isDoingCombo;
@@ -23,6 +24,8 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Player>();
+
         currentScore = 0;
         comboCount = 0;
         levelTimer = levelTime;
@@ -68,6 +71,9 @@ public class Score : MonoBehaviour
 
         if (levelTimer <= 0f)
         {
+            /*gameManager.Respawn();
+            player.Stats.Die();
+            levelTimer = levelTime;*/
             gameManager.ReloadScene();
         }
     }
