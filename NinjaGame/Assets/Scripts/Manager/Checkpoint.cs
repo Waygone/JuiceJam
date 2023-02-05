@@ -7,6 +7,9 @@ public class Checkpoint : MonoBehaviour
     private GameManager GM;
     public AudioSource audioSource;
     public AudioClip audioClip;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D light1;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D light2;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D light3;
     private bool clipPlayed = false;
 
     private void Start()
@@ -21,6 +24,9 @@ public class Checkpoint : MonoBehaviour
         {
             print("Set checkpoint");
             GM.SetCheckpoint(transform);
+            light1.intensity = 2f;
+            light2.intensity = 2f;
+            light3.intensity = 2f;
             if (clipPlayed == false)
             {
                 audioSource.PlayOneShot(audioClip);
