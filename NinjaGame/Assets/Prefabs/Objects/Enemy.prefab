@@ -423,6 +423,8 @@ MonoBehaviour:
   score: {fileID: 0}
   scorePoints: 5
   FloatingTextPrefab: {fileID: 4026182701877223908, guid: b7afc705adef8594fac9cb1daa21cbd0, type: 3}
+  damage: {fileID: 0}
+  damageClip: {fileID: 0}
 --- !u!1 &8436970323874683186
 GameObject:
   m_ObjectHideFlags: 0

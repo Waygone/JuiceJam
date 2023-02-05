@@ -33,6 +33,8 @@ public class Enemy_1 : Entity
     [SerializeField] private Score score;
     [SerializeField] private float scorePoints = 5f;
     public GameObject FloatingTextPrefab;
+    [SerializeField] public AudioSource damage;
+    [SerializeField] public AudioClip damageClip;
 
     public override void Start()
     {
@@ -63,6 +65,7 @@ public class Enemy_1 : Entity
         ShowFloatingText(attackDetails.damageAmount.ToString(), Random.Range(30, 70), GetRandomColor(), TextAnchor.UpperLeft);
         ShowFloatingText(currentHp.ToString(), Random.Range(30, 70), Color.red, TextAnchor.LowerRight);
         CameraShake.Instance.ShakeCamera(5f, 0.1f);
+        damage.PlayOneShot(damageClip);
 
         if (isDead)
         {

@@ -56,13 +56,24 @@ public class Player : MonoBehaviour
 
     private AttackDetails attackDetails;
 
+    //player audio
+    [SerializeField] public AudioSource jump;
+    [SerializeField] public AudioSource doubleJump;
+    [SerializeField] public AudioSource smallWeapon;
+    [SerializeField] public AudioSource largeWeapon;
+    [SerializeField] public AudioSource damage;
+    [SerializeField] public AudioClip jumpClip;
+    [SerializeField] public AudioClip doubleJumpClip;
+    [SerializeField] public AudioClip smallWeaponClip;
+    [SerializeField] public AudioClip largeWeaponClip;
+    [SerializeField] public AudioClip damageClip;
     #endregion
 
     #region Unity Callback Functions
     private void Awake()
     {
         StateMachine = new PlayerStateMachine();
-
+        
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
         JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
@@ -150,6 +161,7 @@ public class Player : MonoBehaviour
         knockback = true;
         knockbackStartTime = Time.time;
         rb.velocity = new Vector2(playerData.knockbackSpeed.x * direction, playerData.knockbackSpeed.y);
+        damage.PlayOneShot(damageClip);
     }
     #endregion
 
@@ -166,6 +178,7 @@ public class Player : MonoBehaviour
             transform.Rotate(0.0f, 180.0f, 0.0f);
         }
     }
+
 
     private void DisableFlip() => canFlip = false;
     private void EnableFlip() => canFlip = true;

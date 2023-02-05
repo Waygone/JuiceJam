@@ -31,13 +31,14 @@ public class PlayerDashState : PlayerAbilityState
         startTime = Time.unscaledTime;
 
         player.DashDirectionIndicator.gameObject.SetActive(true);
+        player.largeWeapon.PlayOneShot(player.largeWeaponClip);
     }
 
     public override void Exit()
     {
         base.Exit();
-
-        if(player.CurrentVelocity.y > 0)
+        player.largeWeapon.PlayOneShot(player.largeWeaponClip);
+        if (player.CurrentVelocity.y > 0)
         {
             player.SetVelocityY(player.CurrentVelocity.y * playerData.dashEndYMultiplier);
         }

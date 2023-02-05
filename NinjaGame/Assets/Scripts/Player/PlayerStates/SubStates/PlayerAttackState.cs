@@ -9,9 +9,16 @@ public class PlayerAttackState : PlayerAbilityState
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        player.smallWeapon.PlayOneShot(player.smallWeaponClip);
+    }
+
     public override void Exit()
     {
         base.Exit();
+        
     }
 
     public override void LogicUpdate()
