@@ -18,6 +18,7 @@ public class Enemy1_DeadState : DeadState
     public override void Enter()
     {
         base.Enter();
+        enemy.deathCrumbles.PlayOneShot(enemy.deathCrumblesClip);
     }
 
     public override void Exit()

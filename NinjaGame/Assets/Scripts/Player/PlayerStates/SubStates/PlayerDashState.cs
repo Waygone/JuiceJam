@@ -21,6 +21,7 @@ public class PlayerDashState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        player.largeWeaponWindup.PlayOneShot(player.largeWeaponWindupClip);
 
         CanDash = false;
         player.InputHandler.UseDashInput();
@@ -31,7 +32,7 @@ public class PlayerDashState : PlayerAbilityState
         startTime = Time.unscaledTime;
 
         player.DashDirectionIndicator.gameObject.SetActive(true);
-        player.largeWeapon.PlayOneShot(player.largeWeaponClip);
+        
     }
 
     public override void Exit()

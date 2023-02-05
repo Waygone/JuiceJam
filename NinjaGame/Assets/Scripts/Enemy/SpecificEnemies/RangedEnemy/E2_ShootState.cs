@@ -75,5 +75,6 @@ public class E2_ShootState : AttackState
     private void Shoot()
     {
         enemy.ShootArrow();
+        enemy.Enemy2Weapon.PlayOneShot(enemy.Enemy2WeaponClip);
     }
 }

@@ -27,6 +27,10 @@ public class Enemy_2 : Entity
     public GameObject arrowPrefab;
     [SerializeField] public AudioSource damage;
     [SerializeField] public AudioClip damageClip;
+    [SerializeField] public AudioSource Enemy2Weapon;
+    [SerializeField] public AudioClip Enemy2WeaponClip;
+    [SerializeField] public AudioSource deathCrumbles;
+    [SerializeField] public AudioClip deathCrumblesClip;
 
     [SerializeField] public float fireRate = 2f;
 
