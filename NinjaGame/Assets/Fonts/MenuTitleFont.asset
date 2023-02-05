@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: yoster SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - GLOW_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -56,9 +57,9 @@ Material:
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.207
-    - _GlowOffset: -0.01
-    - _GlowOuter: 0.681
+    - _GlowInner: 0.171
+    - _GlowOffset: 0.03
+    - _GlowOuter: 0.436
     - _GlowPower: 0.196
     - _GradientScale: 6
     - _LightAngle: 3.1416
@@ -162,11 +163,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: MenuFont
+  m_Name: MenuTitleFont
   m_EditorClassIdentifier: 
-  hashCode: -1884542176
+  hashCode: 924426336
   material: {fileID: -6586863445376115564}
-  materialHashCode: -620549888
+  materialHashCode: -705067328
   m_Version: 1.1.0
   m_SourceFontFileGUID: 81fc2f5b1e5add84094363ef4102ba19
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 81fc2f5b1e5add84094363ef4102ba19, type: 3}
