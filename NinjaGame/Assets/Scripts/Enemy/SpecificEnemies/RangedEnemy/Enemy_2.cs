@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy_2 : Entity
 {
+
     #region States
     public E2_LookForPlayerState lookForPlayerState { get; private set; }
     public E2_PlayerDetectedState playerDetectedState { get; private set; }
@@ -24,6 +25,8 @@ public class Enemy_2 : Entity
     [SerializeField] private float scorePoints = 5f;
     public GameObject FloatingTextPrefab;
     public GameObject arrowPrefab;
+    [SerializeField] public AudioSource damage;
+    [SerializeField] public AudioClip damageClip;
 
     [SerializeField] public float fireRate = 2f;
 
@@ -52,6 +55,7 @@ public class Enemy_2 : Entity
         ShowFloatingText(attackDetails.damageAmount.ToString(), Random.Range(30, 70), GetRandomColor(), TextAnchor.UpperLeft);
         ShowFloatingText(currentHp.ToString(), Random.Range(30, 70), Color.red, TextAnchor.LowerRight);
         CameraShake.Instance.ShakeCamera(5f, 0.1f);
+        damage.PlayOneShot(damageClip);
 
         if (isDead)
         {

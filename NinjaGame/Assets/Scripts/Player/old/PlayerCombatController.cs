@@ -75,6 +75,7 @@ public class PlayerCombatController : MonoBehaviour
                 animator.SetBool("attack1", true);
                 animator.SetBool("firstAttack", isFirstAttack);
                 animator.SetBool("isAttacking", isAttacking);
+                player.smallWeapon.PlayOneShot(player.smallWeaponClip);
             }
         }
         if(Time.time >= lastInputTime + inputTimer)
