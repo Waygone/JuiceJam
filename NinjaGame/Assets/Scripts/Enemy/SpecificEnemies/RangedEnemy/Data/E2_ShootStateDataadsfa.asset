@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae0057d9dc2025c4d83fcc8bc789e2f3, type: 3}
-  m_Name: E2_ShootStateData
+  m_Name: E2_ShootStateDataadsfa
   m_EditorClassIdentifier: 
   attackVelocity: 2
   attackDamage: 10
