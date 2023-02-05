@@ -14,9 +14,9 @@ public class Score : MonoBehaviour
     private float highScore;
 
     [SerializeField] private float comboTime;
-    [SerializeField] private float levelTime;
+    [SerializeField] private float levelMaxTime;
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private Player player;
+    //private Player player;
 
     public float comboCount { get; private set; }
     private bool isDoingCombo;
@@ -24,11 +24,11 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        //player = GameObject.Find("Player").GetComponent<Player>();
 
         currentScore = 0;
         comboCount = 0;
-        levelTimer = levelTime;
+        levelTimer = 0;
 
         scoreText.text = "Score: " + currentScore.ToString();
         timerText.text = levelTimer.ToString();
@@ -63,19 +63,20 @@ public class Score : MonoBehaviour
     }
     public void UpdateTimer()
     {
-        levelTimer -= Time.deltaTime;
+        levelTimer += Time.deltaTime;
         string textForTimer = levelTimer.ToString("0.00");
         timerText.text = textForTimer;
 
-        PlayerPrefs.SetInt("LevelTime", (int)levelTimer);
+        PlayerPrefs.SetFloat("LevelFinishTime", (levelTimer));
+        PlayerPrefs.SetInt("LevelTimeBonus", (int)((levelMaxTime - levelTimer) ));
 
-        if (levelTimer <= 0f)
+        /*if (levelTimer <= 0f)
         {
-            /*gameManager.Respawn();
+            gameManager.Respawn();
             player.Stats.Die();
-            levelTimer = levelTime;*/
+            levelTimer = levelTime;
             gameManager.ReloadScene();
-        }
+        }*/
     }
 
     private void CheckCombo()
