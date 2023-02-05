@@ -19,6 +19,7 @@ public class Enemy1_MeleeAttackState : MeleeAttackState
     public override void Enter()
     {
         base.Enter();
+        enemy.Enemy1Weapon.PlayOneShot(enemy.Enemy1WeaponClip);
     }
 
     public override void Exit()

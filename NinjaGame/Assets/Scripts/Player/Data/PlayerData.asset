@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Bits: 128
   knockbackDuration: 0.2
   knockbackSpeed: {x: 5, y: 5}
-  dashCooldown: 1
+  dashCooldown: 2
   maxHoldTime: 0.6
   holdTimeScale: 0.4
   dashTime: 0.2

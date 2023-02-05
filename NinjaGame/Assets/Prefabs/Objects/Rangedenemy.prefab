@@ -181,12 +181,16 @@ MonoBehaviour:
   deadStateData: {fileID: 11400000, guid: c209e89ba77a2534a95912367a58b0b5, type: 2}
   attackPosition: {fileID: 3083149537853762364}
   score: {fileID: 0}
-  scorePoints: 5
+  scorePoints: 7
   FloatingTextPrefab: {fileID: 4026182701877223908, guid: b7afc705adef8594fac9cb1daa21cbd0, type: 3}
   arrowPrefab: {fileID: 6375290144438629127, guid: ec7cf0845f8175b4db049cb9e13336ae, type: 3}
   damage: {fileID: 0}
   damageClip: {fileID: 0}
-  fireRate: 1
+  Enemy2Weapon: {fileID: 0}
+  Enemy2WeaponClip: {fileID: 0}
+  deathCrumbles: {fileID: 0}
+  deathCrumblesClip: {fileID: 0}
+  fireRate: 0.5
 --- !u!1 &3083149537853762365
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +360,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004060805, y: -0.026518464}
+  m_Offset: {x: -0.040165648, y: -0.0076963305}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -367,7 +371,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.59523046, y: 1.0528636}
+  m_Size: {x: 0.5067775, y: 0.8408531}
   m_EdgeRadius: 0
 --- !u!50 &3083149538357910510
 Rigidbody2D:

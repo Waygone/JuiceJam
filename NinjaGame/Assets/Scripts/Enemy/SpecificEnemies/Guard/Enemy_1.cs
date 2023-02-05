@@ -73,6 +73,7 @@ public class Enemy_1 : Entity
 
         if (isDead)
         {
+            deathCrumbles.PlayOneShot(deathCrumblesClip);
             if (score != null)
             {
                 score.UpdateScore(scorePoints);

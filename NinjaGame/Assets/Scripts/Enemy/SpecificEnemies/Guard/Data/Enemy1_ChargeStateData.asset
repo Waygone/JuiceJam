@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8728882a0165c1d4a83e638338b2545d, type: 3}
   m_Name: Enemy1_ChargeStateData
   m_EditorClassIdentifier: 
-  chargeSpeed: 4
-  chargeTime: 3
+  chargeSpeed: 7
+  chargeTime: 1
