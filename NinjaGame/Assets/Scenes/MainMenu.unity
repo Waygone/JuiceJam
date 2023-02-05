@@ -1348,9 +1348,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "You are a ninja on a mission to infiltrate the castle. Survey the area
-    and find the lit window to successfully complete your mission. Do whatever it
-    takes to reach your destination\u2014 even if it costs your life. Hint: Seek
-    unlit lanterns along your path to gain the favor of the spirits, they may grant
+    and find the castle entrance to complete your mission. Do whatever it takes to
+    reach your destination\u2014 even if it costs you your life. Hint: Seek unlit
+    lanterns along your path to gain the favor of the spirits, as they may grant
     you a second chance..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b63afdca70ca24640a83b3a1b7f2fe8e, type: 2}
@@ -3247,10 +3247,10 @@ MonoBehaviour:
 
     Sword Slash - Left Click
 
-    Dash Attack - Right Click
+    Dash Attack - Right Click (Aim
+    with your Mouse)
 
-    Pause
-    Game - Escape'
+    Pause Game - Escape'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b63afdca70ca24640a83b3a1b7f2fe8e, type: 2}
   m_sharedMaterial: {fileID: -6586863445376115564, guid: b63afdca70ca24640a83b3a1b7f2fe8e, type: 2}
