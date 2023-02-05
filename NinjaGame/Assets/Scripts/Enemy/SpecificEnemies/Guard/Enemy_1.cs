@@ -35,6 +35,10 @@ public class Enemy_1 : Entity
     public GameObject FloatingTextPrefab;
     [SerializeField] public AudioSource damage;
     [SerializeField] public AudioClip damageClip;
+    [SerializeField] public AudioSource Enemy1Weapon;
+    [SerializeField] public AudioClip Enemy1WeaponClip;
+    [SerializeField] public AudioSource deathCrumbles;
+    [SerializeField] public AudioClip deathCrumblesClip;
 
     public override void Start()
     {

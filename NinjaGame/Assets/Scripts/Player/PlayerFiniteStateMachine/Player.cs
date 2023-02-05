@@ -60,13 +60,17 @@ public class Player : MonoBehaviour
     [SerializeField] public AudioSource jump;
     [SerializeField] public AudioSource doubleJump;
     [SerializeField] public AudioSource smallWeapon;
+    [SerializeField] public AudioSource largeWeaponWindup;
     [SerializeField] public AudioSource largeWeapon;
     [SerializeField] public AudioSource damage;
     [SerializeField] public AudioClip jumpClip;
     [SerializeField] public AudioClip doubleJumpClip;
     [SerializeField] public AudioClip smallWeaponClip;
+    [SerializeField] public AudioClip largeWeaponWindupClip;
     [SerializeField] public AudioClip largeWeaponClip;
     [SerializeField] public AudioClip damageClip;
+    [SerializeField] public AudioSource deathCrumbles;
+    [SerializeField] public AudioClip deathCrumblesClip;
     #endregion
 
     #region Unity Callback Functions
