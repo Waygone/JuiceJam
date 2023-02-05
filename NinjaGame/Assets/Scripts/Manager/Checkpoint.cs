@@ -5,6 +5,9 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     private GameManager GM;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+    private bool clipPlayed = false;
 
     private void Start()
     {
@@ -18,6 +21,13 @@ public class Checkpoint : MonoBehaviour
         {
             print("Set checkpoint");
             GM.SetCheckpoint(transform);
+            if (clipPlayed == false)
+            {
+                audioSource.PlayOneShot(audioClip);
+                clipPlayed = true;
+            }
         }
+
+
     }
 }
