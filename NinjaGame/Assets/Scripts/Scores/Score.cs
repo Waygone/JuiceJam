@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
 
     public float comboCount { get; private set; }
     private bool isDoingCombo;
-    private  float comboTimer, levelTimer;
+    private float comboTimer, levelTimer;
 
     private void Start()
     {
@@ -68,7 +68,7 @@ public class Score : MonoBehaviour
         timerText.text = textForTimer;
 
         PlayerPrefs.SetFloat("LevelFinishTime", (levelTimer));
-        PlayerPrefs.SetInt("LevelTimeBonus", (int)((levelMaxTime - levelTimer) ));
+        PlayerPrefs.SetInt("LevelTimeBonus", (int)((levelMaxTime - levelTimer)));
 
         /*if (levelTimer <= 0f)
         {

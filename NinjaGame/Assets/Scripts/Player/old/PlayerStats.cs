@@ -50,6 +50,7 @@ public class PlayerStats : MonoBehaviour
     {
         currentHp -= damage;
         healthBar.SetHealth((int)currentHp);
+        CameraShake.Instance.ShakeCamera(12f, 0.2f);
 
         if (currentHp <= 0.0f)
         {
@@ -65,6 +66,7 @@ public class PlayerStats : MonoBehaviour
     {
         Instantiate(deathPiecesParticle, transform.position, deathPiecesParticle.transform.rotation);
         Instantiate(deathBloodParticle, transform.position, deathBloodParticle.transform.rotation);
+        CameraShake.Instance.ShakeCamera(20f, 0.4f);
 
         GM.Respawn();
 

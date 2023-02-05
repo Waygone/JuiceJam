@@ -49,7 +49,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnPrimaryAttackInput(InputAction.CallbackContext context)
     {
-        if (!player.Stats.isDead && Time.time != 0f)
+        if (!player.Stats.isDead && Time.timeScale != 0f)
         {
             if (context.started)
             {
@@ -75,7 +75,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        if (Time.time != 0f)
+        if (Time.timeScale != 0f)
         {
             RawMovementInput = context.ReadValue<Vector2>();
 
@@ -86,7 +86,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDashInput(InputAction.CallbackContext context)
     {
-        if (!player.Stats.isDead && Time.time != 0f)
+        if (!player.Stats.isDead && Time.timeScale != 0f)
         {
             if (context.started)
             {

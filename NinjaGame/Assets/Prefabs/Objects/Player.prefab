@@ -417,6 +417,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 31f4a1d0fc60e4c4bbff58d2fea60ec7, type: 2}
   groundCheck: {fileID: 5321916850829957231}
+  jump: {fileID: 1650303321730587702, guid: fc335834ea9444dd3ac616fbf7b9314f, type: 3}
+  doubleJump: {fileID: 4840351895371518841, guid: cbb474ed49d5645299934c44b0d98039, type: 3}
+  smallWeapon: {fileID: 337757885895669034, guid: ee1a9fadae80d41828e96a4edd02ca13, type: 3}
+  largeWeapon: {fileID: 1877790328251663781, guid: c843c83cf11ed404c89f37fcc443af6e, type: 3}
+  damage: {fileID: 4094982566378520875, guid: 516dc8b2c28254d10947ea20d2a8167c, type: 3}
+  jumpClip: {fileID: 8300000, guid: 64a61d84d1f8741cb942204f97ad1b4c, type: 3}
+  doubleJumpClip: {fileID: 8300000, guid: 5733f2b9bf2d04fdd87edd3307428da0, type: 3}
+  smallWeaponClip: {fileID: 8300000, guid: 72032e6a43cda4d7c83929f3a6a63cdb, type: 3}
+  largeWeaponClip: {fileID: 8300000, guid: 02f17e0ec59014d82bae4606b74cf858, type: 3}
+  damageClip: {fileID: 8300000, guid: 68da612fc7ad2462d9b44dd83a40508a, type: 3}
 --- !u!114 &5321916851109292408
 MonoBehaviour:
   m_ObjectHideFlags: 0

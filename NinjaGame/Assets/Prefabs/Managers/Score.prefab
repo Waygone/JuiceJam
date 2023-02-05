@@ -318,7 +318,7 @@ MonoBehaviour:
   scoreText: {fileID: 1892590162162956046}
   timerText: {fileID: 1892590162050026477}
   comboTime: 5
-  levelTime: 60
+  levelMaxTime: 120
   gameManager: {fileID: 0}
 --- !u!1 &1892590163634628789
 GameObject:
