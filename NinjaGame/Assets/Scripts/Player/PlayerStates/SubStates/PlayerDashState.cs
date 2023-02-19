@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerDashState : PlayerAbilityState
 {
     public bool CanDash { get; private set; }
-    private float lastDashTime;
+    public float lastDashTime;
+    public float dashTimer;
 
     private bool isHolding;
     private bool dashInputStop;
@@ -48,6 +49,8 @@ public class PlayerDashState : PlayerAbilityState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        dashTimer = Time.time;
+        //Debug.Log(Time.time - lastDashTime + playerData.dashCooldown);
 
         if (!isExitingState && Time.timeScale != 0 && !player.Stats.isDead)
         {
