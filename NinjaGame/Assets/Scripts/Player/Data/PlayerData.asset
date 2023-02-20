@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c8c76b86f3a4f4bbcd7d17065bf0db, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  movementVelocity: 8
-  jumpForce: 20
+  movementVelocity: 9
+  jumpForce: 22
   amountOfJumps: 2
   aproxDamage: 10
   stunDamage: 1
@@ -27,10 +27,10 @@ MonoBehaviour:
   maxHoldTime: 0.6
   holdTimeScale: 0.4
   dashTime: 0.2
-  dashForce: 30
-  drag: 15
-  dashEndYMultiplier: 0.4
-  distanceBetweenTrail: 0.6
+  dashForce: 33
+  drag: 16
+  dashEndYMultiplier: 0.6
+  distanceBetweenTrail: 0.5
   useFixedDirection: 0
   coyoteTime: 1
   jumpHeightMultiplier: 0.5
