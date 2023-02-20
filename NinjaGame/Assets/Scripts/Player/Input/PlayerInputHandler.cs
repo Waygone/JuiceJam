@@ -97,6 +97,7 @@ public class PlayerInputHandler : MonoBehaviour
             else if (context.canceled)
             {
                 DashInputStop = true;
+                dashInputStartTime = 0f;
             }
         }
     }
@@ -138,7 +139,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void CheckDashInputHoldTime()
     {
-        if (Time.time >= dashInputStartTime + inputHoldTime)
+        if (Time.time >= dashInputStartTime + 0.1f)
         {
             DashInput = false;
         }

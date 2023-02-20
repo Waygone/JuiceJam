@@ -19,10 +19,10 @@ public class Checkpoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        print(col);
+        //print(col);
         if (col.tag == "Player")
         {
-            print("Set checkpoint");
+            //print("Set checkpoint");
             GM.SetCheckpoint(transform);
             light1.intensity = 2f;
             light2.intensity = 2f;

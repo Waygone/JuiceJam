@@ -40,6 +40,8 @@ public class Enemy_1 : Entity
     [SerializeField] public AudioSource deathCrumbles;
     [SerializeField] public AudioClip deathCrumblesClip;
 
+    [SerializeField] public float fireRate = 2f;
+
     public override void Start()
     {
         base.Start();

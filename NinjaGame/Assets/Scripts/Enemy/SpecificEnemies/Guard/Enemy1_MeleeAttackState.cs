@@ -6,6 +6,8 @@ using UnityEngine;
 public class Enemy1_MeleeAttackState : MeleeAttackState
 {
     private Enemy_1 enemy;
+    private float fireRateTimer = 0f;
+    private bool canAttack = true;
     public Enemy1_MeleeAttackState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, Transform attackPosition, D_MeleeAttackState stateData, Enemy_1 enemy) : base(stateMachine, entity, animBoolName, attackPosition, stateData)
     {
         this.enemy = enemy;
@@ -14,6 +16,8 @@ public class Enemy1_MeleeAttackState : MeleeAttackState
     public override void DoChecks()
     {
         base.DoChecks();
+
+        CheckCanAttack();
     }
 
     public override void Enter()
@@ -58,4 +62,19 @@ public class Enemy1_MeleeAttackState : MeleeAttackState
     {
         base.TriggerAttack();
     }
+
+    private void CheckCanAttack()
+    {
+        fireRateTimer += Time.deltaTime;
+        if (fireRateTimer > enemy.fireRate)
+        {
+            fireRateTimer = 0;
+            canAttack = true;
+        }
+        else
+        {
+            canAttack = false;
+        }
+    }
+
 }

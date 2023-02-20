@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: E2_BaseData
   m_EditorClassIdentifier: 
   maxHp: 40
-  damageKnockbackSpeed: 2
+  damageKnockbackSpeed: 4
   wallCheckDistance: 1
   ledgeCheckDistance: 2
   groundCheckRadius: 0.5

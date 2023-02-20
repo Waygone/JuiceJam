@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,6 +10,8 @@ public class Player : MonoBehaviour
     #region State Variables
 
     [SerializeField] private PlayerData playerData;
+    [SerializeField] public DashBar dashBar;
+
     public PlayerStateMachine StateMachine { get; private set; }
 
     public PlayerIdleState IdleState { get; private set; }
@@ -100,11 +103,16 @@ public class Player : MonoBehaviour
         canFlip = true;
         //IsAttackFinished = true;
         StateMachine.Initialize(IdleState);
+
+
+        dashBar.SetDashTimer(playerData.dashCooldown);
     }
     private void Update()
     {
         CurrentVelocity = rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
+        dashBar.SetValue(Time.time - DashState.dashTimer);
+        print(DashState.dashTimer - DashState.lastDashTime - playerData.dashCooldown);
     }
     private void FixedUpdate()
     {
