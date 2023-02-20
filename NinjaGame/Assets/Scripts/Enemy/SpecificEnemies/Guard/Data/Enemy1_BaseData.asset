@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHp: 50
   damageKnockbackSpeed: 12
   wallCheckDistance: 1
-  ledgeCheckDistance: 2
+  ledgeCheckDistance: 1
   groundCheckRadius: 0.6
   closeRangeActionDistance: -0.43
   hitParticle: {fileID: 6148682025565388923, guid: b9c8281641593334c871a5290a87f2ca, type: 3}
